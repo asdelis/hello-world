@@ -28,6 +28,7 @@ int main(int argc, const char * argv[]) {
     std::cin >> itemPrice;
     std::cout << "Enter amount paid in cents\n";
     std::cin >> amountPaid;
+    //inputs
     
     int totalChange = amountPaid - itemPrice;
     //creating a variable for the remainder
