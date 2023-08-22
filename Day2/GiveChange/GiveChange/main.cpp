@@ -16,10 +16,12 @@ int main(int argc, const char * argv[]) {
     int totalQuarters;
     int totalDimes;
     int totalNickels;
-    //int totalPennies;
+    int totalPennies;
     //creating output variables
     
-    int remainder;
+    int remainderAfterQuarters;
+    int remainderAfterDimes;
+    int remainderAfterNickels;
     //creating variables for the algorithm
     
     std::cout << "Enter item price in cents\n";
@@ -31,18 +33,26 @@ int main(int argc, const char * argv[]) {
     //creating a variable for the remainder
     
     totalQuarters = totalChange/25;
-    remainder = totalChange%25;
-    //amount of quarters finding new remainder
+    remainderAfterQuarters = totalChange%25;
+    //amount of quarters, finding new remainder
     
-    totalDimes = remainder/10;
+    totalDimes = remainderAfterQuarters/10;
+    remainderAfterDimes = remainderAfterQuarters%10;
+    //amount of dimes, finding new remainder
     
+    totalNickels = remainderAfterDimes/5;
+    remainderAfterNickels = remainderAfterDimes%5;
+    //amount of nickels, finding new remainder
     
-    
+    totalPennies = remainderAfterNickels;
+    //amount of pennies is the new remainder from last step
     
     std::cout << "Change: " << totalChange << std::endl;
     std::cout << "Quarters: " << totalQuarters << std::endl;
-    std::cout << "Dimes " << totalDimes << std::endl;
-    std::cout << "Remainder " << remainder << std::endl;
+    std::cout << "Dimes: " << totalDimes << std::endl;
+    std::cout << "Nickels: " << totalNickels << std::endl;
+    std::cout << "Pennies: " << remainderAfterNickels << std::endl;
+    //outputs
     
     return 0;
 }
