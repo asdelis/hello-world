@@ -9,8 +9,8 @@
 
 int main(int argc, const char * argv[]) {
     
+    /*
     //A for loop seemed more appropriate here because I wrote a little less code
-    
     //making the for loop and printing it out per loop through
     for ( int x = 0; x <= 10; x = x + 1 ){
         std::cout << x << "\n";
@@ -65,26 +65,35 @@ int main(int argc, const char * argv[]) {
     
     //next part
     
-    //establishing the variable
+    //establishing the variables
     int input;
-    int nextInput = 0;
+    int sum = 0;
     //using a do/while loop to loop through the prompt a bunch of times so the
     //person using the program can enter as many numbers as they want
+    //we will also have the input variable update the sum variable every time a
+    //number is added
     do {
         std::cout << "\nPlease enter a whole number.\n";
         std::cin >> input;
+        sum = sum + input;
     }
-    while (input > 0);
-    
-    
-    //input = input + nextInput;
-    //
-    
-    //print the new input
-    //std::cout << input;
+    while (input >= 0);
+    //backing the last input (the negative number) out of our sum
+    sum = sum - input;
+    //printing the amount
+    std::cout << sum << "\n";
+     
+     */
     
     //next part
     
+    for (int a = 1; a <= 5; a = a + 1){
+        std::cout << a << "x*:" << " ";
+        for (int b = 1; b <= 5; b = b + 1) {
+            std::cout << "\n" << b;
+            //std::cout << "\n";
+        }
+    }
     
     return 0;
 }
