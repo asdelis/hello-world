@@ -9,19 +9,18 @@
 
 int main(int argc, const char * argv[]) {
     
-    //A for loop seemed more appropriate here
-    //because I wrote a little less code
+    //A for loop seemed more appropriate here because I wrote a little less code
     
     //making the for loop and printing it out per loop through
     for ( int x = 0; x <= 10; x = x + 1 ){
-        std::cout << x;
+        std::cout << x << "\n";
     }
     //variable
     int num = 0;
     //making the while loop and printing it out per loop through
     while (num < 10){
         num = num + 1;
-        std::cout << num;
+        std::cout << num << "\n";
     }
     
     //next part
@@ -32,23 +31,25 @@ int main(int argc, const char * argv[]) {
     //creating prompts for the user to enter two numbers
     std::cout << "\nEnter any whole number.\n";
     std::cin >> input1;
-    std::cout << "Enter any other whole number larger than your first answer.\n";
+    std::cout << "Enter any other whole number.\n";
     std::cin >> input2;
     //creating a while loop in the if statement to add
     //qualifiers that will determine which program to run
     if (input1 < input2) {
         while (input1 < input2){
-            input1 = input1 + 1;
             std::cout << input1 << "\n";
+            input1 = input1 + 1;
+            
         }
     }
     else {
         while (input1 > input2){
-            input1 = input1 - 1;
             std::cout << input1 << "\n";
+            input1 = input1 - 1;
+            
         }
     }
-    
+    std::cout << input1 << "\n";
     //next part
     
     //using a for loop to find every other number starting with 1
@@ -64,6 +65,25 @@ int main(int argc, const char * argv[]) {
     
     //next part
     
+    //establishing the variable
+    int input;
+    int nextInput = 0;
+    //using a do/while loop to loop through the prompt a bunch of times so the
+    //person using the program can enter as many numbers as they want
+    do {
+        std::cout << "\nPlease enter a whole number.\n";
+        std::cin >> input;
+    }
+    while (input > 0);
+    
+    
+    //input = input + nextInput;
+    //
+    
+    //print the new input
+    //std::cout << input;
+    
+    //next part
     
     
     return 0;
