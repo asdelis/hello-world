@@ -34,23 +34,35 @@ int main(int argc, const char * argv[]) {
     std::cin >> input1;
     std::cout << "Enter any other whole number larger than your first answer.\n";
     std::cin >> input2;
-    //creating a while loop in the if statement
+    //creating a while loop in the if statement to add
+    //qualifiers that will determine which program to run
     if (input1 < input2) {
         while (input1 < input2){
             input1 = input1 + 1;
-            std::cout << input1;
+            std::cout << input1 << "\n";
         }
     }
     else {
         while (input1 > input2){
             input1 = input1 - 1;
-            std::cout << input1;
+            std::cout << input1 << "\n";
         }
     }
     
     //next part
     
-    num = 0;
+    //using a for loop to find every other number starting with 1
+    for ( int y = 1; y <= 20; y = y + 2 ){
+        std::cout << y << "\n";
+    }
+    //using a for loop and an if statement to find all the even numbers
+    for (int z = 1; z <= 20; z = z + 1) {
+        if (z % 2 == 1) {
+            std::cout << z << "\n";
+        }
+    }
+    
+    //next part
     
     
     
