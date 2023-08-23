@@ -9,6 +9,8 @@
 
 int main(int argc, const char * argv[]) {
     
+    //Part 1
+    
     int age;
     //creating the variable we need
     
@@ -52,6 +54,59 @@ int main(int argc, const char * argv[]) {
         std::cout << "You are an iKid." << "\n";
     }
     //using else for the youngest generation
+    
+    //Part 2
+    
+    //weekday, holiday, young children
+    
+    char weekdayResponse;
+    char holidayResponse;
+    char childrenResponse;
+    //response variables
+    
+    bool isWeekday;
+    bool isHoliday;
+    bool hasChildren;
+    //creaing the booleans for the responses
+    
+    std::cout << "Is today a weekday? (Y/N)\n";
+    std::cin >> weekdayResponse;
+    std::cout << "Is today a holiday? (Y/N)\n";
+    std::cin >> holidayResponse;
+    std::cout << "Do you have small children? (Y/N)\n";
+    std::cin >> childrenResponse;
+    //creating the inputs for the program
+    
+    if (weekdayResponse == 'Y'){
+        isWeekday = true;
+    }
+    else {
+        isWeekday = false;
+    }
+    if (holidayResponse == 'Y'){
+        isHoliday = true;
+    }
+    else {
+        isHoliday = false;
+    }
+    if (childrenResponse == 'Y'){
+        hasChildren = true;
+    }
+    else {
+        hasChildren = false;
+    }
+    //saving the responses in a boolean variable
+    
+    if (hasChildren) {
+        std::cout << "You do not get to sleep in today\n";
+    }
+    else if (isHoliday || !isWeekday) {
+        std::cout << "You get to sleep in today\n";
+    }
+    else {
+        std::cout << "You do not get to sleep in today\n";
+    }
+    //if statement based on the boolean variables
     
     return 0;
 }
