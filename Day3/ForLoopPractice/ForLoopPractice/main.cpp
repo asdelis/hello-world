@@ -9,7 +9,6 @@
 
 int main(int argc, const char * argv[]) {
     
-    /*
     //A for loop seemed more appropriate here because I wrote a little less code
     //making the for loop and printing it out per loop through
     for ( int x = 0; x <= 10; x = x + 1 ){
@@ -82,14 +81,17 @@ int main(int argc, const char * argv[]) {
     sum = sum - input;
     //printing the amount
     std::cout << sum << "\n";
-     
-     */
     
     //next part
     
+    //creating the first loop using variable "a"
+    //also added some formatting
     for (int a = 1; a <= 5; a = a + 1){
         std::cout << "\n";
         std::cout << a << "x*:" << " ";
+    //creating a second loop for every output of the first loop
+    //that multiplies the first loop outputs by "a"
+    // included some formatting
         for (int b = 1; b <= 5; b = b + 1) {
             std::cout << " " << b * a;
         }
