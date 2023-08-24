@@ -88,10 +88,10 @@ int main(int argc, const char * argv[]) {
     //next part
     
     for (int a = 1; a <= 5; a = a + 1){
+        std::cout << "\n";
         std::cout << a << "x*:" << " ";
         for (int b = 1; b <= 5; b = b + 1) {
-            std::cout << "\n" << b;
-            //std::cout << "\n";
+            std::cout << " " << b * a;
         }
     }
     
