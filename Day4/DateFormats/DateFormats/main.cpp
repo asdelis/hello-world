@@ -10,7 +10,7 @@
 
 int main(int argc, const char * argv[]) {
     
-    //Andrew Delis Part 2 and Part 2.5
+    //Andrew Delis Part 2 (Part 1 included too)
     
     //Created the input variable that will be a single string.
     std::string input;
@@ -21,8 +21,10 @@ int main(int argc, const char * argv[]) {
     std::string inputYear;
     
     //Created variables that allow the strings
-    //above (except month) to be saved as integers.
+    //above to be saved as integers.
+    //Month used for part 2.5
     int day;
+    int month;
     int year;
     
     //Created a variable for the max number of days per month
@@ -109,6 +111,7 @@ int main(int argc, const char * argv[]) {
     else {
         std::cout << "Please enter a valid date." << "\n";
     }
+    
     
     //Josh Barton Part 1
     
