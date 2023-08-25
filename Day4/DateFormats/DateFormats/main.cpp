@@ -20,106 +20,95 @@ int main(int argc, const char * argv[]) {
     std::string inputMonth;
     std::string inputYear;
     
-    //Also created a boolean that will be used to check if the input
-    //was in the correct format.
-    bool correctFormat;
-    
-    //
+    //Created variables that allow the strings
+    //above (except month) to be saved as integers.
     int day;
-    int monthMax;
+    int year;
+    
+    //Created a variable for the max number of days per month
+    int maxDay;
     
     //creating the prompt using the string variable we just created
     std::cout << " Enter a date: (mm/dd/yyyy)" << "\n";
     std::cin >> input;
     
-    //Used an if statement to make sure date format is correct (mm/dd/yyyy).
-    //Did this by using the input variable
-    //and the boolean "correctFormat" that we created above.
+    //The lab instructions said we can assume that
+    //the input is in the correct format (mm/dd/yyyy).
     
-    //Created another if statment in the first if statementn
-    //that separates the individual characters for the day, month, and year,
+    //This separates the individual characters for the day, month, and year,
     //and assigns those new string values to variables.
+    inputMonth = input.substr(0,2);
+    inputDay = input.substr(3,2);
+    inputYear = input.substr(6,4);
     
-    //I thought it would be a good idea to do this in a nested if because
-    //it prevents the sub-strings from being assigned values
-    //if the input is in the wrong format
-    if (input.length() == 10) {
-        correctFormat = true;
-        if (correctFormat = true){
-            inputMonth = input.substr(0,2);
-            inputDay = input.substr(3,2);
-            inputYear = input.substr(6,4);
-        }
-    }
-    else {
-        std::cout << "Please enter a valid date." << "\n";
-    }
-    
-    
-    
-    
-    //converting the month from numeric strings into word strings
+    //converting the inputMonth from a numeric string
+    //into their respective word strings
     if (inputMonth == "01") {
         inputMonth = "January ";
-        monthMax = 31;
+        maxDay = 31;
     }
     else if (inputMonth == "02"){
         inputMonth = "February ";
-        monthMax = 29;
+        maxDay = 29;
     }
     else if (inputMonth == "03"){
         inputMonth = "March ";
-        monthMax = 31;
+        maxDay = 31;
     }
     else if (inputMonth == "04"){
         inputMonth = "April ";
-        monthMax = 30;
+        maxDay = 30;
     }
     else if (inputMonth == "05"){
         inputMonth = "May ";
-        monthMax = 31;
+        maxDay = 31;
     }
     else if (inputMonth == "06"){
         inputMonth = "June ";
-        monthMax = 30;
+        maxDay = 30;
     }
     else if (inputMonth == "07"){
         inputMonth = "July ";
-        monthMax = 31;
+        maxDay = 31;
     }
     else if (inputMonth == "08"){
         inputMonth = "August ";
-        monthMax = 31;
+        maxDay = 31;
     }
     else if (inputMonth == "09"){
         inputMonth = "September ";
-        monthMax = 30;
+        maxDay = 30;
     }
     else if (inputMonth == "10"){
         inputMonth = "October ";
-        monthMax = 31;
+        maxDay = 31;
     }
     else if (inputMonth == "11"){
         inputMonth = "November ";
-        monthMax = 30;
+        maxDay = 30;
     }
     else if (inputMonth == "12"){
         inputMonth = "December ";
-        monthMax = 31;
+        maxDay = 31;
+    }
+    else {
+        std::cout << inputMonth << " is not a real month." << "\n";
+    }
+    
+    //This converts the numeric string for the day of the month and the year
+    //into an integer and makes it is a valid year or day of the month
+    day = std::stoi(inputDay);
+    year = std::stoi(inputYear);
+    
+    //outputs given the parameters laid on in the lab instructions
+    //given that the input is correct 0000 will be the only
+    //input that is not valid I think
+    if ( 0 < day && day <= maxDay && year != 0000 ) {
+        std::cout << inputMonth << day << ", " << year << "\n";
     }
     else {
         std::cout << "Please enter a valid date." << "\n";
     }
-    
-    //converting the numeric string for the day of the month into an integer
-    //and making sure it is a valid day of the month (not in the most precise way though)
-    day = std::stoi(inputDay);
-    if ( day < 0 || day > monthMax) {
-        std::cout << "Please enter a valid date." << "\n";
-    }
-    
-    //outputs
-    std::cout << inputMonth << std::stoi(inputDay) << ", " << inputYear << "\n";
     
     //Josh Barton Part 1
     
