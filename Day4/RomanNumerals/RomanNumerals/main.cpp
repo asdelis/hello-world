@@ -11,12 +11,11 @@
 int main(int argc, const char * argv[]) {
     
     //creating an input variable
-    //and a variable for the remainder
+    //and a variable that will count how many times a roman numeral is in our input
     int input;
     int num;
-    int remainder;
     
-    //creating a string for the roman numerals
+    //creating a string to use for our output of the final result
     std::string romNum;
     
     //first prompt
@@ -24,15 +23,15 @@ int main(int argc, const char * argv[]) {
     std::cin >> input;
 
     //check to see if input is greater than zero
+    //print invalid result if it is
     if (input > 0){
         
         //check to see if the input is greater than or equal to
         //1000 so we can check if there are any M's in there
         
-        //loops through and concatinates the num number of M's
+        //loops through and concatinates the num number of M's to romNum
         
-        //calculates the remainder so we can use
-        //it for the next sequence instead of input
+        //recalculate the input so we can use it to find the next roman numeral's num
         
         if (input >= 1000){
             num = input / 1000;
@@ -40,112 +39,112 @@ int main(int argc, const char * argv[]) {
                 romNum += "M";
             }
         }
-        remainder = input % 1000;
+        input = input % 1000;
         
-        //repeating the process above for the over roman numerals
+        //repeating the process above for the other roman numerals
         
         //CM
-        if (remainder >= 900){
-            num = remainder / 900;
+        if (input >= 900){
+            num = input / 900;
             for (int i = 0; i < num; i++){
                 romNum += "CM";
             }
         }
-        remainder = input % 900;
+        input = input % 900;
         
         //D
-        if (remainder >= 500){
-            num = remainder / 500;
+        if (input >= 500){
+            num = input / 500;
             for (int i = 0; i < num; i++){
                 romNum += "D";
             }
         }
-        remainder = input % 500;
+        input = input % 500;
         
         //CD
-        if (remainder >= 400){
-            num = remainder / 400;
+        if (input >= 400){
+            num = input / 400;
             for (int i = 0; i < num; i++){
                 romNum += "CD";
             }
         }
-        remainder = input % 400;
+        input = input % 400;
         
         //C
-        if (remainder >= 100){
-            num = remainder / 100;
+        if (input >= 100){
+            num = input / 100;
             for (int i = 0; i < num; i++){
                 romNum += "C";
             }
         }
-        remainder = input % 100;
+        input = input % 100;
         
         //XC
-        if (remainder >= 90){
-            num = remainder / 90;
+        if (input >= 90){
+            num = input / 90;
             for (int i = 0; i < num; i++){
                 romNum += "XC";
             }
         }
-        remainder = input % 90;
+        input = input % 90;
         
         //L
-        if (remainder >= 50){
-            num = remainder / 50;
+        if (input >= 50){
+            num = input / 50;
             for (int i = 0; i < num; i++){
                 romNum += "L";
             }
         }
-        remainder = input % 50;
+        input = input % 50;
         
         //XL
-        if (remainder >= 40){
-            num = remainder / 40;
+        if (input >= 40){
+            num = input / 40;
             for (int i = 0; i < num; i++){
                 romNum += "XL";
             }
         }
-        remainder = input % 40;
+        input = input % 40;
         
         //X
-        if (remainder >= 10){
-            num = remainder / 10;
+        if (input >= 10){
+            num = input / 10;
             for (int i = 0; i < num; i++){
                 romNum += "X";
             }
         }
-        remainder = input % 10;
+        input = input % 10;
         
         //IX
-        if (remainder >= 9){
-            num = remainder / 9;
+        if (input >= 9){
+            num = input / 9;
             for (int i = 0; i < num; i++){
                 romNum += "IX";
             }
         }
-        remainder = input % 9;
+        input = input % 9;
         
         //V
-        if (remainder >= 5){
-            num = remainder / 5;
+        if (input >= 5){
+            num = input / 5;
             for (int i = 0; i < num; i++){
                 romNum += "V";
             }
         }
-        remainder = input % 5;
+        input = input % 5;
         
         //IV
-        if (remainder >= 4){
-            num = remainder / 4;
+        if (input >= 4){
+            num = input / 4;
             for (int i = 0; i < num; i++){
                 romNum += "IV";
             }
         }
-        remainder = input % 4;
+        input = input % 4;
         
         //I
-        if (remainder >= 1){
-            num = remainder / 1;
+        if (input >= 1){
+            num = input / 1;
             for (int i = 0; i < num; i++){
                 romNum += "I";
             }
@@ -155,6 +154,7 @@ int main(int argc, const char * argv[]) {
         std::cout << "Invalid Input";
     }
     
+    //output the concatinated results
     std::cout << romNum << "\n";
     
     return 0;
