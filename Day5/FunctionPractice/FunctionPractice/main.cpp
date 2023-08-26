@@ -8,6 +8,7 @@
 #include <iostream>
 #include <cmath>
 #include <ctime>
+#include <string>
 
 //Lab Functions
 //Part 2
@@ -35,6 +36,25 @@ double getYVelocity (double spd, double ang){
 
 //Part 2
 //c)
+//creating function to return a boolean and take a string input
+//created three variables: one character, one integer, and the last one a boolean
+//the character and integer are used to get the ascii for the first character of our input (wrd)
+//if the input is between those ascii numbers it should be a capitalized letter
+//according to cpp reference
+//represent that ^ in the code
+//return the boolean for whether the first letter is a capital letter
+bool isCapitalized (std::string wrd){
+    char firstLetter = wrd.front();
+    int asciiValue = firstLetter;
+    bool isCapStatus;
+    if (firstLetter >= 65 && firstLetter <= 90) {
+        isCapStatus = true;
+    }
+    else {
+        isCapStatus = false;
+    }
+    return isCapStatus;
+}
 
 
 int main(int argc, const char * argv[]) {
@@ -83,8 +103,24 @@ int main(int argc, const char * argv[]) {
     
     //Part 2
     //c)
+    //created the variable for the string input that is prompted
+    //and for the boolean that we will use to capture the function results
+    std::string input;
+    bool isCap;
+    //created the prompt
+    std::cout << "Please type a word\n";
+    std::cin >> input;
+    //ran the function and used its results in an if statement to print if the first
+    //letter of the word that was entered and saved in input is a capital or not
+    isCap = isCapitalized(input);
+    if (isCap) {
+        std::cout << "The first letter of that word is capitalized.\n";
+    }
+    else {
+        std::cout << "The first letter of that word is not capitalized.\n";
+    }
     
-
+    
     
     
     //Lab Functions
