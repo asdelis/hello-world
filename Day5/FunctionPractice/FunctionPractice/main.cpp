@@ -56,29 +56,7 @@ bool isCapitalized (std::string wrd){
     return isCapStatus;
 }
 
-
 int main(int argc, const char * argv[]) {
-    
-    //Part 2
-    //c)
-    //created the variable for the string input that is prompted
-    //and for the boolean that we will use to capture the function results
-    std::string input;
-    bool isCap;
-    //created the prompt
-    std::cout << "Please type a word\n";
-    std::cin >> input;
-    //ran the function and used its results in an if statement to print if the first
-    //letter of the word that was entered and saved in input is a capital or not
-    isCap = isCapitalized(input);
-    if (isCap) {
-        std::cout << "The first letter of that word is capitalized.\n";
-    }
-    else {
-        std::cout << "The first letter of that word is not capitalized.\n";
-    }
-    
-    
     
     //Lab Functions
     //Part 2
@@ -122,7 +100,24 @@ int main(int argc, const char * argv[]) {
     std::cout << "X Velocity: " << xVel << "\n";
     std::cout << "Y Velocity: " << xVel << "\n";
     
-    
+    //Part 2
+    //c)
+    //created the variable for the string input that is prompted
+    //and for the boolean that we will use to capture the function results
+    std::string input;
+    bool isCap;
+    //created the prompt
+    std::cout << "Please type a word\n";
+    std::cin >> input;
+    //ran the function and used its results in an if statement to print if the first
+    //letter of the word that was entered and saved in input is a capital or not
+    isCap = isCapitalized(input);
+    if (isCap) {
+        std::cout << "The first letter of that word is capitalized.\n";
+    }
+    else {
+        std::cout << "The first letter of that word is not capitalized.\n";
+    }
     
     
     
