@@ -60,20 +60,54 @@ bool IsConsonant(char letter){
 }
 
 //Returns the number of words in the string.
-//int NumWords(std::string string){
-    
-//}
+int NumWords(std::string inputString){
+    int numWords = 0;
+    for (int i = 0; i < inputString.length(); i++) {
+        if (inputString[i] == ' ') {
+            numWords += 1;
+        }
+    }
+    return numWords + 1;
+}
 
-//int NumSentences(std::string string){
-    //int sentenceCount
-    
-//}
+//Returns the number of sentences in the string.
+int NumSentences(std::string inputString){
+    int numSentence = 0;
+    for (int i = 0; i < inputString.length(); i++) {
+        if (IsTerminator(inputString[i]) == true) {
+            numSentence += 1;
+        }
+    }
+    return numSentence;
+}
+
+//Returns the number of vowels in the string.
+int NumVowels(std::string inputString){
+    int numVowels = 0;
+    for (int i = 0; i < inputString.length(); i++) {
+        if (IsVowel(inputString[i]) == true) {
+            numVowels += 1;
+        }
+    }
+    return numVowels;
+}
+
+//Returns the number of consonants in the string.
+int NumConsonants(std::string inputString){
+    int numConso = 0;
+    for (int i = 0; i < inputString.length(); i++) {
+        if (IsConsonant(inputString[i]) == true) {
+            numConso += 1;
+        }
+    }
+    return numConso;
+}
+
+
+
+
 
 /*
-int NumWords(string s)
-int NumSentences(string s)
-int NumVowels(string s)
-int NumConsonants(string s)
 double AverageWordLength(string s)
 double AverageVowelsPerWord(string s)
 */
@@ -97,10 +131,11 @@ int main(int argc, const char * argv[]) {
      */
     
     //loop through the string above
+    std::string output;
     for (int i = input.length()-1; i >= input.length(); i++) {
-        
+        output += input[i];
     }
-    
+    std::cout << output;
     
     /*
      Example
