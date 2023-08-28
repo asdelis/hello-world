@@ -147,13 +147,14 @@ int main(int argc, const char * argv[]) {
     //create prompt
     std::string input;
     std::cout << "Enter a string containing one or more sentences: \n";
-    std::getline(std::cin, input);
     
-    //will print the string if you type "done"
-    
-    
-    //prints the string on the screen
-    std::cout << input << "\n" << "Analysis: \n";
+    //while loop for the input
+    while (input != "done") {
+        std::getline(std::cin, input);
+        if (input == "done") {
+            break;
+        }
+    }
     
     //calling all my functions
     //Number of Words
