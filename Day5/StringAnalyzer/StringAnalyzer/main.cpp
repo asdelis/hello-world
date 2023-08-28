@@ -153,26 +153,26 @@ int main(int argc, const char * argv[]) {
     
     
     //prints the string on the screen
-    std::cout << input << "\n";
+    std::cout << input << "\n" << "Analysis: \n";
     
     //calling all my functions
     //Number of Words
-    std::cout << "Number of words: " << NumWords(input)<< "\n";
+    std::cout << " Number of words: " << NumWords(input)<< "\n";
     
     //Number of Sentences
-    std::cout << "Number of sentences: " << NumSentences(input)<< "\n";
+    std::cout << " Number of sentences: " << NumSentences(input)<< "\n";
     
     //Number of vowels
-    std::cout << "Number of vowels: " << NumVowels(input) << "\n";
+    std::cout << " Number of vowels: " << NumVowels(input) << "\n";
     
     //Number of consonants
-    std::cout << "Number of consonants: " << NumConsonants(input) << "\n";
+    std::cout << " Number of consonants: " << NumConsonants(input) << "\n";
     
     //Reading level
-    std::cout << "Reading level (average word length): " << AverageWordLength(input) << "\n";
+    std::cout << " Reading level (average word length): " << AverageWordLength(input) << "\n";
     
     //Average vowels
-    std::cout << "Average vowels per word: " << AverageVowelsPerWord(input) << "\n";
+    std::cout << " Average vowels per word: " << AverageVowelsPerWord(input) << "\n";
     
     /*
      Example
