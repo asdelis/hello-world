@@ -8,6 +8,7 @@
 #include <iostream>
 
 //Returns whether or not the character is ., ?, or !.
+//char -> bool
 bool IsTerminator(char letter){
     int intFormOfLetter = letter;
     bool isTerm;
@@ -21,6 +22,7 @@ bool IsTerminator(char letter){
 }
 
 //Returns whether or not the character is ., ?, !, or ,.
+//char -> bool
 bool IsPunctuation(char letter){
     int intFormOfLetter = letter;
     bool isPunc;
@@ -34,6 +36,7 @@ bool IsPunctuation(char letter){
 }
 
 //Returns whether or not the character is a vowel.
+//char -> bool
 bool IsVowel(char letter){
     int intFormOfLetter = letter;
     bool isVwl;
@@ -46,11 +49,22 @@ bool IsVowel(char letter){
     return isVwl;
 }
 
+//Returns whether or not the character is a space.
+//char -> bool
+bool IsSpace(char letter){
+    bool isSpa;
+    if (letter == ' '){
+        isSpa = true;
+    }
+    return isSpa;
+}
+
 //Returns whether or not the character is a consonant.
+//char -> bool
 bool IsConsonant(char letter){
     int intFormOfLetter = letter;
     bool isCon;
-    if (IsPunctuation(intFormOfLetter) == false && IsVowel(intFormOfLetter) == false){
+    if (IsPunctuation(intFormOfLetter) == false && IsVowel(intFormOfLetter) == false && IsTerminator(intFormOfLetter) == false && IsSpace(letter) == false){
         isCon = true;
     }
     else {
@@ -60,17 +74,19 @@ bool IsConsonant(char letter){
 }
 
 //Returns the number of words in the string.
+//string -> int
 int NumWords(std::string inputString){
-    int numWords = 0;
+    int numWrd = 0;
     for (int i = 0; i < inputString.length(); i++) {
         if (inputString[i] == ' ') {
-            numWords += 1;
+            numWrd += 1;
         }
     }
-    return numWords + 1;
+    return numWrd + 1;
 }
 
 //Returns the number of sentences in the string.
+//string -> int
 int NumSentences(std::string inputString){
     int numSentence = 0;
     for (int i = 0; i < inputString.length(); i++) {
@@ -82,6 +98,7 @@ int NumSentences(std::string inputString){
 }
 
 //Returns the number of vowels in the string.
+//string -> int
 int NumVowels(std::string inputString){
     int numVowels = 0;
     for (int i = 0; i < inputString.length(); i++) {
@@ -93,6 +110,7 @@ int NumVowels(std::string inputString){
 }
 
 //Returns the number of consonants in the string.
+//string -> int
 int NumConsonants(std::string inputString){
     int numConso = 0;
     for (int i = 0; i < inputString.length(); i++) {
@@ -103,15 +121,27 @@ int NumConsonants(std::string inputString){
     return numConso;
 }
 
+//Returns the average length of all words in the string.
+//((number of vowels + number of consonants) / number of words)
+//string -> double
+double AverageWordLength(std::string inputString){
+    double numVwl = NumVowels(inputString);
+    double numConso = NumVowels(inputString);
+    double numWrd = NumWords(inputString);
+    double avgWordLength;
+    avgWordLength = (numVwl + numConso) / numWrd;
+    return avgWordLength;
+}
 
+double AverageVowelsPerWord(std::string inputString){
+    double numVwl = NumVowels(inputString);
+    double numWrds = NumWords(inputString);
+    double avgVowelsPerWord;
+    avgVowelsPerWord = numVwl / numWrds;
+    return avgVowelsPerWord;
+}
 
-
-
-/*
-double AverageWordLength(string s)
-double AverageVowelsPerWord(string s)
-*/
-
+//Main
 int main(int argc, const char * argv[]) {
     
     //create prompt
@@ -121,21 +151,28 @@ int main(int argc, const char * argv[]) {
     
     //will print the string if you type "done"
     
-    //Test that my first function (isTerminator) works
-    //It did worked and returned a 0 for false and 1 for true
-    /*
-    char letter = input.front();
-    bool isTerm;
-    isTerm = IsTerminator(letter);
-    std::cout << isTerm << "\n";
-     */
     
-    //loop through the string above
-    std::string output;
-    for (int i = input.length()-1; i >= input.length(); i++) {
-        output += input[i];
-    }
-    std::cout << output;
+    //prints the string on the screen
+    std::cout << input << "\n";
+    
+    //calling all my functions
+    //Number of Words
+    std::cout << "Number of words: " << NumWords(input)<< "\n";
+    
+    //Number of Sentences
+    std::cout << "Number of sentences: " << NumSentences(input)<< "\n";
+    
+    //Number of vowels
+    std::cout << "Number of vowels: " << NumVowels(input) << "\n";
+    
+    //Number of consonants
+    std::cout << "Number of consonants: " << NumConsonants(input) << "\n";
+    
+    //Reading level
+    std::cout << "Reading level (average word length): " << AverageWordLength(input) << "\n";
+    
+    //Average vowels
+    std::cout << "Average vowels per word: " << AverageVowelsPerWord(input) << "\n";
     
     /*
      Example
