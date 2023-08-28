@@ -146,34 +146,37 @@ int main(int argc, const char * argv[]) {
     
     //create prompt
     std::string input;
+    std::string fullString;
     std::cout << "Enter a string containing one or more sentences: \n";
     
     //while loop for the input
     while (input != "done") {
         std::getline(std::cin, input);
+        fullString += input;
         if (input == "done") {
             break;
         }
     }
     
+    
     //calling all my functions
     //Number of Words
-    std::cout << " Number of words: " << NumWords(input)<< "\n";
+    std::cout << " Number of words: " << NumWords(fullString)<< "\n";
     
     //Number of Sentences
-    std::cout << " Number of sentences: " << NumSentences(input)<< "\n";
+    std::cout << " Number of sentences: " << NumSentences(fullString)<< "\n";
     
     //Number of vowels
-    std::cout << " Number of vowels: " << NumVowels(input) << "\n";
+    std::cout << " Number of vowels: " << NumVowels(fullString) << "\n";
     
     //Number of consonants
-    std::cout << " Number of consonants: " << NumConsonants(input) << "\n";
+    std::cout << " Number of consonants: " << NumConsonants(fullString) << "\n";
     
     //Reading level
-    std::cout << " Reading level (average word length): " << AverageWordLength(input) << "\n";
+    std::cout << " Reading level (average word length): " << AverageWordLength(fullString) << "\n";
     
     //Average vowels
-    std::cout << " Average vowels per word: " << AverageVowelsPerWord(input) << "\n";
+    std::cout << " Average vowels per word: " << AverageVowelsPerWord(fullString) << "\n";
     
     /*
      Example
