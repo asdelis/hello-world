@@ -46,6 +46,7 @@ bool IsVowel(char letter){
     return isVwl;
 }
 
+//Returns whether or not the character is a consonant.
 bool IsConsonant(char letter){
     int intFormOfLetter = letter;
     bool isCon;
@@ -58,10 +59,17 @@ bool IsConsonant(char letter){
     return isCon;
 }
 
+//Returns the number of words in the string.
+//int NumWords(std::string string){
+    
+//}
 
+//int NumSentences(std::string string){
+    //int sentenceCount
+    
+//}
 
 /*
-bool IsConsonant(char c)
 int NumWords(string s)
 int NumSentences(string s)
 int NumVowels(string s)
@@ -77,7 +85,9 @@ int main(int argc, const char * argv[]) {
     std::cout << "Enter a string containing one or more sentences: \n";
     std::getline(std::cin, input);
     
-    //Test that my first function works
+    //will print the string if you type "done"
+    
+    //Test that my first function (isTerminator) works
     //It did worked and returned a 0 for false and 1 for true
     /*
     char letter = input.front();
@@ -85,6 +95,25 @@ int main(int argc, const char * argv[]) {
     isTerm = IsTerminator(letter);
     std::cout << isTerm << "\n";
      */
+    
+    //loop through the string above
+    for (int i = input.length()-1; i >= input.length(); i++) {
+        
+    }
+    
+    
+    /*
+     Example
+     Enter a string containing one or more sentences: (done)
+     Here is sentence number one. Here is sentence number two!
+     Analysis:
+      Number of words: 10
+      Number of sentences: 2
+      Number of vowels: 19
+      Number of consonants: 27
+      Reading level (average word length): 4.6
+      Average vowels per word: 1.9
+    */
     
     return 0;
 }
