@@ -41,7 +41,7 @@ double getYVelocity (double spd, double ang){
 //the character and integer are used to get the ascii for the first character of our input (wrd)
 //if the input is between those ascii numbers it should be a capitalized letter
 //according to cpp reference
-//represent that ^ in the code
+//represent that ^ in the code with an if statement
 //return the boolean for whether the first letter is a capital letter
 bool isCapitalized (std::string wrd){
     char firstLetter = wrd.front();
