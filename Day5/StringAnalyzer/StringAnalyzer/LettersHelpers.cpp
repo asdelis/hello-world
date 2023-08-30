@@ -52,7 +52,7 @@ bool IsVowel(char letter){
 //Returns whether or not the character is a space.
 //char -> bool
 bool IsSpace(char letter){
-    bool isSpa;
+    bool isSpa = false;
     if (letter == ' '){
         isSpa = true;
     }
@@ -64,7 +64,7 @@ bool IsSpace(char letter){
 bool IsConsonant(char letter){
     int intFormOfLetter = letter;
     bool isCon;
-    if (IsPunctuation(intFormOfLetter) == false && IsVowel(intFormOfLetter) == false && IsTerminator(intFormOfLetter) == false && IsSpace(letter) == false){
+    if (IsPunctuation(intFormOfLetter) == false && IsVowel(intFormOfLetter) == false && !IsTerminator(intFormOfLetter) && IsSpace(letter) == false){
         isCon = true;
     }
     else {

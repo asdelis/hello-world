@@ -17,5 +17,7 @@ int main(int argc, const char * argv[]) {
     //tests whether printCardsInDeck works
     printCardsInDeck(deck);
     
+    
+    
     return 0;
 }

@@ -25,7 +25,7 @@ int NumWords(std::string inputString){
 int NumSentences(std::string inputString){
     int numSentence = 0;
     for (int i = 0; i < inputString.length(); i++) {
-        if (IsTerminator(inputString[i]) == true) {
+        if (IsTerminator(inputString[i])) {
             numSentence += 1;
         }
     }
