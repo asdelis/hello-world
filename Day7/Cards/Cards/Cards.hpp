@@ -11,7 +11,6 @@
 #pragma once
 #include <stdio.h>
 #include <string>
-#include <iostream>
 
 #endif /* Cards_hpp */
 

@@ -16,9 +16,6 @@ int main(int argc, const char * argv[]) {
     std::vector<card> deck;
     deck = buildDeck(input);
     assert(deck.size() == 52);
-    for (int i = 0; i < deck.size(); i++) {
-        std::cout << deck[i].rank;
-    }
     
     
     
