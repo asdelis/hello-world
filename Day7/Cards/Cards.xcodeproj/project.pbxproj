@@ -7,12 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		EB5E74962A9E569900A25AF7 /* PoliStructs.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EB5E74942A9E569900A25AF7 /* PoliStructs.cpp */; };
-		EB5E74982A9E5B9C00A25AF7 /* PoliStructsTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EB5E74972A9E5B9B00A25AF7 /* PoliStructsTest.cpp */; };
+		EB5E74A62A9EC87E00A25AF7 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EB5E74A52A9EC87E00A25AF7 /* main.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		EB5E74882A9E556D00A25AF7 /* CopyFiles */ = {
+		EB5E74A02A9EC87E00A25AF7 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
@@ -24,14 +23,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		EB5E748A2A9E556D00A25AF7 /* PoliStructs */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = PoliStructs; sourceTree = BUILT_PRODUCTS_DIR; };
-		EB5E74942A9E569900A25AF7 /* PoliStructs.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = PoliStructs.cpp; sourceTree = "<group>"; };
-		EB5E74952A9E569900A25AF7 /* PoliStructs.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = PoliStructs.hpp; sourceTree = "<group>"; };
-		EB5E74972A9E5B9B00A25AF7 /* PoliStructsTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PoliStructsTest.cpp; sourceTree = "<group>"; };
+		EB5E74A22A9EC87E00A25AF7 /* Cards */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Cards; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB5E74A52A9EC87E00A25AF7 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		EB5E74872A9E556D00A25AF7 /* Frameworks */ = {
+		EB5E749F2A9EC87E00A25AF7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -41,67 +38,65 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		EB5E74812A9E556D00A25AF7 = {
+		EB5E74992A9EC87E00A25AF7 = {
 			isa = PBXGroup;
 			children = (
-				EB5E748C2A9E556D00A25AF7 /* PoliStructs */,
-				EB5E748B2A9E556D00A25AF7 /* Products */,
+				EB5E74A42A9EC87E00A25AF7 /* Cards */,
+				EB5E74A32A9EC87E00A25AF7 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		EB5E748B2A9E556D00A25AF7 /* Products */ = {
+		EB5E74A32A9EC87E00A25AF7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				EB5E748A2A9E556D00A25AF7 /* PoliStructs */,
+				EB5E74A22A9EC87E00A25AF7 /* Cards */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		EB5E748C2A9E556D00A25AF7 /* PoliStructs */ = {
+		EB5E74A42A9EC87E00A25AF7 /* Cards */ = {
 			isa = PBXGroup;
 			children = (
-				EB5E74972A9E5B9B00A25AF7 /* PoliStructsTest.cpp */,
-				EB5E74942A9E569900A25AF7 /* PoliStructs.cpp */,
-				EB5E74952A9E569900A25AF7 /* PoliStructs.hpp */,
+				EB5E74A52A9EC87E00A25AF7 /* main.cpp */,
 			);
-			path = PoliStructs;
+			path = Cards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		EB5E74892A9E556D00A25AF7 /* PoliStructs */ = {
+		EB5E74A12A9EC87E00A25AF7 /* Cards */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = EB5E74912A9E556D00A25AF7 /* Build configuration list for PBXNativeTarget "PoliStructs" */;
+			buildConfigurationList = EB5E74A92A9EC87E00A25AF7 /* Build configuration list for PBXNativeTarget "Cards" */;
 			buildPhases = (
-				EB5E74862A9E556D00A25AF7 /* Sources */,
-				EB5E74872A9E556D00A25AF7 /* Frameworks */,
-				EB5E74882A9E556D00A25AF7 /* CopyFiles */,
+				EB5E749E2A9EC87E00A25AF7 /* Sources */,
+				EB5E749F2A9EC87E00A25AF7 /* Frameworks */,
+				EB5E74A02A9EC87E00A25AF7 /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = PoliStructs;
-			productName = PoliStructs;
-			productReference = EB5E748A2A9E556D00A25AF7 /* PoliStructs */;
+			name = Cards;
+			productName = Cards;
+			productReference = EB5E74A22A9EC87E00A25AF7 /* Cards */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		EB5E74822A9E556D00A25AF7 /* Project object */ = {
+		EB5E749A2A9EC87E00A25AF7 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastUpgradeCheck = 1430;
 				TargetAttributes = {
-					EB5E74892A9E556D00A25AF7 = {
+					EB5E74A12A9EC87E00A25AF7 = {
 						CreatedOnToolsVersion = 14.3.1;
 					};
 				};
 			};
-			buildConfigurationList = EB5E74852A9E556D00A25AF7 /* Build configuration list for PBXProject "PoliStructs" */;
+			buildConfigurationList = EB5E749D2A9EC87E00A25AF7 /* Build configuration list for PBXProject "Cards" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -109,30 +104,29 @@
 				en,
 				Base,
 			);
-			mainGroup = EB5E74812A9E556D00A25AF7;
-			productRefGroup = EB5E748B2A9E556D00A25AF7 /* Products */;
+			mainGroup = EB5E74992A9EC87E00A25AF7;
+			productRefGroup = EB5E74A32A9EC87E00A25AF7 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				EB5E74892A9E556D00A25AF7 /* PoliStructs */,
+				EB5E74A12A9EC87E00A25AF7 /* Cards */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		EB5E74862A9E556D00A25AF7 /* Sources */ = {
+		EB5E749E2A9EC87E00A25AF7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EB5E74982A9E5B9C00A25AF7 /* PoliStructsTest.cpp in Sources */,
-				EB5E74962A9E569900A25AF7 /* PoliStructs.cpp in Sources */,
+				EB5E74A62A9EC87E00A25AF7 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		EB5E748F2A9E556D00A25AF7 /* Debug */ = {
+		EB5E74A72A9EC87E00A25AF7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -190,7 +184,7 @@
 			};
 			name = Debug;
 		};
-		EB5E74902A9E556D00A25AF7 /* Release */ = {
+		EB5E74A82A9EC87E00A25AF7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -241,7 +235,7 @@
 			};
 			name = Release;
 		};
-		EB5E74922A9E556D00A25AF7 /* Debug */ = {
+		EB5E74AA2A9EC87E00A25AF7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -249,7 +243,7 @@
 			};
 			name = Debug;
 		};
-		EB5E74932A9E556D00A25AF7 /* Release */ = {
+		EB5E74AB2A9EC87E00A25AF7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -260,25 +254,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		EB5E74852A9E556D00A25AF7 /* Build configuration list for PBXProject "PoliStructs" */ = {
+		EB5E749D2A9EC87E00A25AF7 /* Build configuration list for PBXProject "Cards" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				EB5E748F2A9E556D00A25AF7 /* Debug */,
-				EB5E74902A9E556D00A25AF7 /* Release */,
+				EB5E74A72A9EC87E00A25AF7 /* Debug */,
+				EB5E74A82A9EC87E00A25AF7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		EB5E74912A9E556D00A25AF7 /* Build configuration list for PBXNativeTarget "PoliStructs" */ = {
+		EB5E74A92A9EC87E00A25AF7 /* Build configuration list for PBXNativeTarget "Cards" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				EB5E74922A9E556D00A25AF7 /* Debug */,
-				EB5E74932A9E556D00A25AF7 /* Release */,
+				EB5E74AA2A9EC87E00A25AF7 /* Debug */,
+				EB5E74AB2A9EC87E00A25AF7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = EB5E74822A9E556D00A25AF7 /* Project object */;
+	rootObject = EB5E749A2A9EC87E00A25AF7 /* Project object */;
 }
