@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		EB5E74A62A9EC87E00A25AF7 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EB5E74A52A9EC87E00A25AF7 /* main.cpp */; };
+		EB5E74AE2A9EC89F00A25AF7 /* Cards.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EB5E74AC2A9EC89F00A25AF7 /* Cards.cpp */; };
+		EB5E74B02A9EE13600A25AF7 /* CardTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EB5E74AF2A9EE13600A25AF7 /* CardTest.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,7 +25,9 @@
 
 /* Begin PBXFileReference section */
 		EB5E74A22A9EC87E00A25AF7 /* Cards */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Cards; sourceTree = BUILT_PRODUCTS_DIR; };
-		EB5E74A52A9EC87E00A25AF7 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		EB5E74AC2A9EC89F00A25AF7 /* Cards.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Cards.cpp; sourceTree = "<group>"; };
+		EB5E74AD2A9EC89F00A25AF7 /* Cards.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Cards.hpp; sourceTree = "<group>"; };
+		EB5E74AF2A9EE13600A25AF7 /* CardTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CardTest.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +60,9 @@
 		EB5E74A42A9EC87E00A25AF7 /* Cards */ = {
 			isa = PBXGroup;
 			children = (
-				EB5E74A52A9EC87E00A25AF7 /* main.cpp */,
+				EB5E74AC2A9EC89F00A25AF7 /* Cards.cpp */,
+				EB5E74AD2A9EC89F00A25AF7 /* Cards.hpp */,
+				EB5E74AF2A9EE13600A25AF7 /* CardTest.cpp */,
 			);
 			path = Cards;
 			sourceTree = "<group>";
@@ -119,7 +124,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EB5E74A62A9EC87E00A25AF7 /* main.cpp in Sources */,
+				EB5E74AE2A9EC89F00A25AF7 /* Cards.cpp in Sources */,
+				EB5E74B02A9EE13600A25AF7 /* CardTest.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

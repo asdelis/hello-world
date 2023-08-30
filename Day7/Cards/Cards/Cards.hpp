@@ -23,3 +23,6 @@ struct card{
 //builds a deck of cards based on an input
 std::vector<card> buildDeck(std::string input);
 
+//prints out a deck of cards
+card printDeck(std::vector<card>);
+

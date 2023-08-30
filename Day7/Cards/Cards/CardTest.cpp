@@ -6,16 +6,17 @@
 //
 
 #include "Cards.hpp"
-#include "Cards.cpp"
-
 
 
 int main(int argc, const char * argv[]) {
     
+    //testing whether buildDeck works
     std::string input = "build";
     std::vector<card> deck;
     deck = buildDeck(input);
     assert(deck.size() == 52);
+    
+    //testing whether printDeck works
     
     
     
