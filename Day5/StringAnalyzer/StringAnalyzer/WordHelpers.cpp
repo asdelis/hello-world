@@ -64,7 +64,7 @@ double AverageWordLength(std::string inputString){
     double numConso = NumVowels(inputString);
     double numWrd = NumWords(inputString);
     double avgWordLength;
-    avgWordLength = (numVwl + numConso) / numWrd;
+    avgWordLength = ((numVwl + numConso) / numWrd);
     return avgWordLength;
 }
 
