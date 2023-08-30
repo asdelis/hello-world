@@ -6,33 +6,47 @@
 //
 
 #include "Cards.hpp"
-#include <string>
-
 
 //generate cards
-std::vector<card> buildDeck(std::string input){
-    //a variable that will store the cards made
-    std::vector<card> deck;
-    card singleCard;
+//no input, just outputs a deck of cards
+std::vector<card> buildDeck(std::vector<card> deck){
     
-    std::vector<int> allRank = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13};
+    //a variable that will store the individual cards
+    //the vectors that the function will use to generate the cards
     std::vector<std::string> allSuit = {"spade", "heart", "diamond", "club"};
-    if (input == "build") {
-        for (int i = 0; i < allRank.size(); i++) {
-            for(int j = 0; j < allSuit.size(); i++){
-                singleCard.rank = i;
-                singleCard.suit = j;
-                deck.push_back(singleCard);
-            }
+    std::vector<int> allRank = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13};
+    
+    //a double loop that matches all ranks to suits as a card
+    //and stores it in a vector
+    for (int i = 0; i < allSuit.size(); i++) {
+        for(int j = 0; j < allRank.size(); j++){
+            card singleCard = {allSuit[i], allRank[j]};
+            deck.push_back(singleCard);
         }
     }
     return deck;
 }
 
-card printDeck(std::vector<card>){
-    std::vector<card> inputDeck;
-    card c;
-    
+//no output just prints the cards in the deck
+void printCardsInDeck(std::vector<card> deck){
+    for (card singleCard : deck) {
+        std::cout << singleCard.suit << " ";
+        if (singleCard.rank == 1) {
+            std::cout << "ace\n";
+        }
+        else if (singleCard.rank == 11) {
+            std::cout << "jack\n";
+        }
+        else if (singleCard.rank == 12) {
+            std::cout << "queen\n";
+        }
+        else if (singleCard.rank == 13) {
+            std::cout << "king\n";
+        }
+        else {
+            std::cout << singleCard.rank << "\n";
+        }
+    }
 }
 
 

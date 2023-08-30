@@ -7,18 +7,15 @@
 
 #include "Cards.hpp"
 
-
 int main(int argc, const char * argv[]) {
     
-    //testing whether buildDeck works
-    std::string input = "build";
-    std::vector<card> deck;
-    deck = buildDeck(input);
-    assert(deck.size() == 52);
+    //tests whether buildDeck works
+    std::vector<card> deck = {};
+    deck = buildDeck(deck);
+    assert(deck.size()==52);
     
-    //testing whether printDeck works
-    
-    
+    //tests whether printCardsInDeck works
+    printCardsInDeck(deck);
     
     return 0;
 }
