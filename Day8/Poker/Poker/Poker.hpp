@@ -42,8 +42,13 @@ std::vector<card> createHand(std::vector<card>& deck);
 bool checkFlush(std::vector<card> hand);
 
 //checks to see if cards in a vector are in numerical order
-bool checkStraight(std::vector<card>& hand);
+bool checkStraight(std::vector<card> hand);
 
-//bool checkStraightFlush(std::vector<card> hand);
-//bool checkRoyalFlush(std::vector<card> hand);
+//checks to see if a hand meets both the checkStraight and checkFlush criteria
+bool checkStraightFlush(std::vector<card> hand);
+
+//checks if the hand passes the checkStraightFlush
+//and whether the first positions rank is 10
+bool checkRoyalFlush(std::vector<card> hand);
+
 //bool checkFullHouse(std::vector<card> hand);

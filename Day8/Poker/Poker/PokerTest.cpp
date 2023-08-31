@@ -25,6 +25,19 @@ int main(int argc, const char * argv[]) {
     hand = createHand(deck);
     assert(hand.size() == 5);
     
+    //tests whether checkFlush and checkStraight works
+    card card1 = {"spade",10};
+    card card2 = {"spade",11};
+    card card3 = {"spade",12};
+    card card4 = {"spade",13};
+    card card5 = {"spade",14};
+    std::vector<card> testHand = {card2, card3, card1, card4, card5};
+    assert(checkFlush(testHand) == true);
+    assert(checkStraight(testHand) == true);
+    assert(checkStraightFlush(testHand) == true);
+    //assert(checkRoyalFlush(testHand) == true);
+    
+    
     //printing to see what is in that hand
     //printCardsInDeck(hand);
     

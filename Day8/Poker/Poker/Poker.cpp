@@ -14,8 +14,7 @@ std::vector<card> createDeck(std::vector<card> deck){
     //a variable that will store the individual cards
     //the vectors that the function will use to generate the cards
     std::vector<std::string> allSuit = {"spade", "heart", "diamond", "club"};
-    std::vector<int> allRank = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13};
-    
+    std::vector<int> allRank = {2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14};
     //a double loop that matches all ranks to suits as a card
     //and stores it in a vector
     for (int i = 0; i < allSuit.size(); i++){
@@ -31,7 +30,7 @@ std::vector<card> createDeck(std::vector<card> deck){
 void printCardsInDeck(const std::vector<card>& deck){
     for (card singleCard : deck) {
         std::cout << singleCard.suit << " ";
-        if (singleCard.rank == 1) {
+        if (singleCard.rank == 14) {
             std::cout << "ace\n";
         }
         else if (singleCard.rank == 11) {
@@ -87,20 +86,32 @@ bool checkFlush(std::vector<card> hand){
     return isFlush;
 }
 
-//checks to see if cards in a vector are in numerical order
-//after it sorts it
-bool checkStraight(std::vector<card>& hand){
+//sorts hand and checks to see if cards in the vector are in numerical order
+bool checkStraight(std::vector<card> hand){
+    //first create a new vector of just the ranks of the cards
     std::vector<int> justRanks = {};
     for(card c : hand){
         justRanks.push_back(c.rank);
     }
+    //then uses the sort function to sort them
     std::sort(justRanks.begin(), justRanks.end());
-    int i = 0;
-    for (int i = 0; i < justRanks.size(); i++) {
-        i = (i + 1) - i;
+    //checks to see if the difference between currect position in the vector (i)
+    //and the next position in the vector (i + 1) is equal to one
+    bool isStraight = false;
+    for (int i = 0; i < justRanks.size() - 1; i++) {
+        if (justRanks[i + 1] - justRanks[i] == 1) {
+            isStraight = true;
+        }
     }
-    return (i == 5);
+    return isStraight;
 }
 
+bool checkStraightFlush(std::vector<card> hand){
+    return (checkFlush(hand) && checkStraight(hand));
+}
+
+bool checkRoyalFlush(std::vector<card> hand){
+    return (checkFlush(hand) && checkStraight(hand) && hand[1].rank == 10);
+}
 
 
