@@ -35,7 +35,8 @@ int main(int argc, const char * argv[]) {
     assert(checkFlush(testHand) == true);
     assert(checkStraight(testHand) == true);
     assert(checkStraightFlush(testHand) == true);
-    //assert(checkRoyalFlush(testHand) == true);
+    assert(checkRoyalFlush(testHand) == true);
+    
     
     
     //printing to see what is in that hand

@@ -86,8 +86,8 @@ bool checkFlush(std::vector<card> hand){
     return isFlush;
 }
 
-//sorts hand and checks to see if cards in the vector are in numerical order
-bool checkStraight(std::vector<card> hand){
+//sorts hand
+std::vector<int> sortCardRank(std::vector<card> hand){
     //first create a new vector of just the ranks of the cards
     std::vector<int> justRanks = {};
     for(card c : hand){
@@ -95,6 +95,12 @@ bool checkStraight(std::vector<card> hand){
     }
     //then uses the sort function to sort them
     std::sort(justRanks.begin(), justRanks.end());
+    return justRanks;
+}
+
+//sorts hand and checks to see if cards in the vector are in numerical order
+bool checkStraight(std::vector<card> hand){
+    std::vector<int> justRanks = sortCardRank(hand);
     //checks to see if the difference between currect position in the vector (i)
     //and the next position in the vector (i + 1) is equal to one
     bool isStraight = false;
@@ -111,7 +117,9 @@ bool checkStraightFlush(std::vector<card> hand){
 }
 
 bool checkRoyalFlush(std::vector<card> hand){
-    return (checkFlush(hand) && checkStraight(hand) && hand[1].rank == 10);
+    std::vector<int> justRanks = sortCardRank(hand);
+    //check the conditions of a royal flush
+    return (checkFlush(hand) && checkStraight(hand) && justRanks[0] == 10);
 }
 
 

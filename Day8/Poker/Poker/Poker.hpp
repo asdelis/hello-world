@@ -37,9 +37,11 @@ void shuffleDeck (std::vector<card>& deck);
 //creates a hand
 std::vector<card> createHand(std::vector<card>& deck);
 
-//HAVE NOT TESTED THESE YET
 //checks to see if cards in a vector are all the same suit
 bool checkFlush(std::vector<card> hand);
+
+//sorts all the ranks of a vector of cards
+std::vector<int> sortCardRank(std::vector<card> hand);
 
 //checks to see if cards in a vector are in numerical order
 bool checkStraight(std::vector<card> hand);
