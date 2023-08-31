@@ -17,6 +17,7 @@
 #include <string>
 #include <iostream>
 #include <cstdlib>
+#include <algorithm>
 
 //a simple struct for cards that holds rank and stuit
 struct card{
@@ -25,12 +26,24 @@ struct card{
 };
 
 //builds a deck of cards based on an input
-std::vector<card> buildDeck(std::vector<card> deck);
+std::vector<card> createDeck(std::vector<card> deck);
 
 //prints out a deck of cards
 void printCardsInDeck(const std::vector<card>& deck);
 
-//shuffles the deck of cards randomly
+//shuffles the deck of cards
 void shuffleDeck (std::vector<card>& deck);
 
+//creates a hand
+std::vector<card> createHand(std::vector<card>& deck);
 
+//HAVE NOT TESTED THESE YET
+//checks to see if cards in a vector are all the same suit
+bool checkFlush(std::vector<card> hand);
+
+//checks to see if cards in a vector are in numerical order
+bool checkStraight(std::vector<card>& hand);
+
+//bool checkStraightFlush(std::vector<card> hand);
+//bool checkRoyalFlush(std::vector<card> hand);
+//bool checkFullHouse(std::vector<card> hand);
