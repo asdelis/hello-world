@@ -32,20 +32,16 @@ bool Contains( vector<int> input, int lookFor ) {
   // returns true if input contains the value lookFor, and false otherwise.
   // "value" is where the individual values of the vector are stored
   // then deleted after a loop ends
-    bool isContained;
     if (input.empty() == true) {
-        isContained = false;
+        return false;
     }
     else {
         for (int i = 0; i < input.size(); i++)
             if (input[i] == lookFor) {
-                isContained = true;
-            }
-            else {
-                isContained = false;
+                return true;
             }
     }
-    return isContained;
+    return false;
 }
     
 /*
@@ -109,11 +105,11 @@ int Average( vector<int> input ) {
     // TODO: Fill in implementation. Do not always return 0.
     int total;
     int totalNum = input.size();
-    for (int i = 0; i < input.size(); i++){
+    for (int i = 0; i < totalNum; i++){
         total += input[i];
     }
-    int avg = total / totalNum;
-    return avg;
+    return total / totalNum;
+    
 }
 
 /*
@@ -138,15 +134,12 @@ int Average( vector<int> input ) {
  */
     
 bool IsSorted( vector<int> input ) {
-  // TODO: Fill in implementation. Do not always return false.
-    bool isSort;
-    std::vector<int> sortedInput = input;
-    std::sort(sortedInput.begin(), sortedInput.end());
-    if (sortedInput == input) {
-        isSort = true;
+    // TODO: Fill in implementation. Do not always return false.
+    bool isSorted = false;
+    for (int i : input) {
+        if (i < input[i + 1]) {
+            isSorted = true;
+        }
     }
-    else {
-        isSort = false;
-    }
-    return isSort;
+    return isSorted;
 }
