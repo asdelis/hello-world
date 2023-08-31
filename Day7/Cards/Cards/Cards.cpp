@@ -28,7 +28,7 @@ std::vector<card> buildDeck(std::vector<card> deck){
 }
 
 //no output just prints the cards in the deck
-void printCardsInDeck(std::vector<card> deck){
+void printCardsInDeck( std::vector<card> deck){
     for (card singleCard : deck) {
         std::cout << singleCard.suit << " ";
         if (singleCard.rank == 1) {
