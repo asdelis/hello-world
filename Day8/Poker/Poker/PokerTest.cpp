@@ -25,7 +25,8 @@ int main(int argc, const char * argv[]) {
     hand = createHand(deck);
     assert(hand.size() == 5);
     
-    //tests whether checkFlush and checkStraight works
+    //tests whether checkFlush, checkStraight,
+    //checkStraightFlush, and checkRoyalFlush works
     card card1 = {"spade",10};
     card card2 = {"spade",11};
     card card3 = {"spade",12};
@@ -38,6 +39,7 @@ int main(int argc, const char * argv[]) {
     assert(checkRoyalFlush(testHand) == true);
     
     //tests whether checkFullHouse works
+    //by making two hands that should return true
     card card6 = {"spade",10};
     card card7 = {"spade",11};
     card card8 = {"spade",12};
