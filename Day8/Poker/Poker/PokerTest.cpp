@@ -20,7 +20,7 @@ int main(int argc, const char * argv[]) {
     int straightFlushCount = 0;
     int royalFlushCount = 0;
     int fullHouseCount = 0;
-    for (int i = 0; i < 11; i++) {
+    for (int i = 0; i < 1000; i++) {
         shuffleDeck(statsDeck);
         std::vector<card> statsDeckHand = {};
         statsDeckHand = createHand(statsDeck);
@@ -45,12 +45,6 @@ int main(int argc, const char * argv[]) {
     std::cout << "straightFlushCount; " << straightFlushCount << "\n";
     std::cout << "Royal Flush Count; " << royalFlushCount << "\n";
     std::cout << "Full House Count; " << fullHouseCount << "\n";
-    
-    
-    
-    
-    
-    
     
     //FUNCTION TESTS
     //tests whether buildDeck works

@@ -74,7 +74,6 @@ std::vector<card> createHand(std::vector<card>& deck){
 }
 
 
-//HAVE NOT TESTED THESE YET
 //checks to see if cards are all the same suit
 bool checkFlush(std::vector<card> hand){
     bool isFlush = false;
