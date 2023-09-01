@@ -15,7 +15,6 @@ std::vector<card> buildDeck(std::vector<card> deck){
     //the vectors that the function will use to generate the cards
     std::vector<std::string> allSuit = {"spade", "heart", "diamond", "club"};
     std::vector<int> allRank = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13};
-    
     //a double loop that matches all ranks to suits as a card
     //and stores it in a vector
     for (int i = 0; i < allSuit.size(); i++) {
