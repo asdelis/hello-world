@@ -37,6 +37,21 @@ int main(int argc, const char * argv[]) {
     assert(checkStraightFlush(testHand) == true);
     assert(checkRoyalFlush(testHand) == true);
     
+    //tests whether checkFullHouse works
+    card card6 = {"spade",10};
+    card card7 = {"spade",11};
+    card card8 = {"spade",12};
+    card card9 = {"heart",13};
+    card card10 = {"heart",14};
+    std::vector<card> testHandTwo = {card2, card3, card1, card4, card5};
+    assert(checkFullHouse(testHandTwo) == true);
+    card card11 = {"spade",10};
+    card card12 = {"spade",11};
+    card card13 = {"heart",12};
+    card card14 = {"heart",13};
+    card card15 = {"heart",14};
+    std::vector<card> testHandThree = {card2, card3, card1, card4, card5};
+    assert(checkFullHouse(testHandThree) == true);
     
     
     //printing to see what is in that hand

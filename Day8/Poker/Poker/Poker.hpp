@@ -43,6 +43,9 @@ bool checkFlush(std::vector<card> hand);
 //sorts all the ranks of a vector of cards
 std::vector<int> sortCardRank(std::vector<card> hand);
 
+//sorts all the suits of a vector of cards
+std::vector<std::string> sortCardSuit(std::vector<card> hand);
+
 //checks to see if cards in a vector are in numerical order
 bool checkStraight(std::vector<card> hand);
 
@@ -53,4 +56,4 @@ bool checkStraightFlush(std::vector<card> hand);
 //and whether the first positions rank is 10
 bool checkRoyalFlush(std::vector<card> hand);
 
-//bool checkFullHouse(std::vector<card> hand);
+bool checkFullHouse(std::vector<card> hand);

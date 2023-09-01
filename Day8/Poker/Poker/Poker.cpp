@@ -86,7 +86,7 @@ bool checkFlush(std::vector<card> hand){
     return isFlush;
 }
 
-//sorts hand
+//sorts hand by rank
 std::vector<int> sortCardRank(std::vector<card> hand){
     //first create a new vector of just the ranks of the cards
     std::vector<int> justRanks = {};
@@ -96,6 +96,18 @@ std::vector<int> sortCardRank(std::vector<card> hand){
     //then uses the sort function to sort them
     std::sort(justRanks.begin(), justRanks.end());
     return justRanks;
+}
+
+//sorts hand by suit
+std::vector<std::string> sortCardSuit(std::vector<card> hand){
+    //first create a new vector of just the suits of the cards
+    std::vector<std::string> justSuits = {};
+    for(card c : hand){
+        justSuits.push_back(c.suit);
+    }
+    //then uses the sort function to sort them
+    std::sort(justSuits.begin(), justSuits.end());
+    return justSuits;
 }
 
 //sorts hand and checks to see if cards in the vector are in numerical order
@@ -121,5 +133,21 @@ bool checkRoyalFlush(std::vector<card> hand){
     //check the conditions of a royal flush
     return (checkFlush(hand) && checkStraight(hand) && justRanks[0] == 10);
 }
+
+bool checkFullHouse(std::vector<card> hand){
+    std::vector<std::string> justSuits = sortCardSuit(hand);
+    bool isFullHouse = false;
+    if (justSuits[0] == justSuits[1] && justSuits[1] == justSuits[2] && justSuits[3] == justSuits[4]) {
+        isFullHouse = true;
+    }
+    else if (justSuits[0] == justSuits[1] && justSuits[2] == justSuits[3] && justSuits[3] == justSuits[4]) {
+        isFullHouse = true;
+    }
+    else {
+        isFullHouse = false;
+    }
+    return isFullHouse;
+}
+
 
 
