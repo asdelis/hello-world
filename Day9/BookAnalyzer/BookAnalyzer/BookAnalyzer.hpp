@@ -16,13 +16,19 @@
 #endif /* BookAnalyzer_hpp */
 
 
-
-
-
 //print title of the book (see below)
+std::string findTitle(std::vector<std::string> allSentences);
+
 //print author of the book (see below)
-//print total number of words in the file
-//print otal number of characters in the file (excluding whitespace).
+std::string findAuthor(std::vector<std::string> allSentences);
+
+//print total number of characters in the file (excluding whitespace).
+int findCharNum(std::vector<std::string> allWords);
+
 //print shortest word in the book
+std::string findMinWord(std::vector<std::string> allWords);
+
 //print longest word in the book
+std::string findMaxWord(std::vector<std::string> allWords);
+
 //print number of appearances, and locations of, the users key word (see below)
