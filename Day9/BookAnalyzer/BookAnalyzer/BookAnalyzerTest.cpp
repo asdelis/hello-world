@@ -15,6 +15,10 @@ int main(int argc, const char * argv[]) {
 //    std::getline(std::cin, fileName);
     std::ifstream inFileStream(fileName);
     
+    std::string inputWord = "weltering";
+//    std::cout << "Please enter a word you would like analyzed.\n";
+//    std::cin >> inputWord;
+    
     //send an error message if the wrong one is typed in
     if (inFileStream.fail()) {
         std::cout << "Failed to open file:" << fileName << ".\n";
@@ -49,7 +53,8 @@ int main(int argc, const char * argv[]) {
     std::cout << "  Number of characters: " << findCharNum(allWords) << "\n";
     std::cout << "  The shortest word is: " << findMinWord(allWords) << "\n";
     std::cout << "  The largest word is: " << findMaxWord(allWords) << "\n";
-    
+    std::cout << "The word " << inputWord << " appears " << countInputWord(allWords, inputWord) << " times: \n";
+    printSurroundingWords(allWords, inputWord);
     
     
     return 0;

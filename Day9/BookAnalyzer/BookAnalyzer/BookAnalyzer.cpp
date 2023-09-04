@@ -52,7 +52,6 @@ int findCharNum(std::vector<std::string> allWords){
     return totalChar;
 }
 
-//ASK ABOUT THIS ONE
 //find the smallest word using a loop
 std::string findMinWord(std::vector<std::string> allWords){
     std::string minWord;
@@ -66,8 +65,6 @@ std::string findMinWord(std::vector<std::string> allWords){
     return minWord;
 }
 
-
-//ASK ABOUT THIS ONE
 //find the largest word using a loop
 std::string findMaxWord(std::vector<std::string> allWords){
     std::string maxWord;
@@ -79,6 +76,31 @@ std::string findMaxWord(std::vector<std::string> allWords){
         }
     }
     return maxWord;
+}
+
+//
+int countInputWord(std::vector<std::string> allWords, std::string inputWord){
+    int inputWordCount = 0;
+    for (int i = 0; i < allWords.size(); i++){
+        if (inputWord == allWords[i]) {
+            inputWordCount += 1;
+        }
+    }
+    return inputWordCount;
+}
+
+//
+void printSurroundingWords(std::vector<std::string> allWords, std::string inputWord){
+    std::string space = " ";
+    std::string combinedString;
+    float wordPlace;
+    for (float i = 0; i < allWords.size(); i++){
+        if (inputWord == allWords[i]) {
+            wordPlace = (i / allWords.size()) * 100;
+            combinedString = allWords[i-1] + space + allWords[i] + space + allWords[i+1];
+            std:: cout << "at " << wordPlace << "%: " << combinedString << "\n";
+        }
+    }
 }
 
 

@@ -31,4 +31,8 @@ std::string findMinWord(std::vector<std::string> allWords);
 //print longest word in the book
 std::string findMaxWord(std::vector<std::string> allWords);
 
-//print number of appearances, and locations of, the users key word (see below)
+//print number of appearances of the users key word
+int countInputWord(std::vector<std::string> allWords, std::string inputWord);
+
+//print the locations of the users key word and the two surrounding words
+void printSurroundingWords(std::vector<std::string> allWords, std::string inputWord);
