@@ -98,7 +98,7 @@ void printSurroundingWords(std::vector<std::string> allWords, std::string inputW
         if (inputWord == allWords[i]) {
             wordPlace = (i / allWords.size()) * 100;
             combinedString = allWords[i-1] + space + allWords[i] + space + allWords[i+1];
-            std:: cout << "at " << wordPlace << "%: " << combinedString << "\n";
+            std:: cout << "  at " << wordPlace << "%: " << combinedString << "\n";
         }
     }
 }
