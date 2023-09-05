@@ -7,12 +7,9 @@
 
 #include "Cards.hpp"
 
-//generate cards
-//no input, just outputs a deck of cards
+//generate cards using two different vectors and two loops
 std::vector<card> buildDeck(std::vector<card> deck){
-    
-    //a variable that will store the individual cards
-    //the vectors that the function will use to generate the cards
+    //the vectors that contain the information needed to generate a deck of cards
     std::vector<std::string> allSuit = {"spade", "heart", "diamond", "club"};
     std::vector<int> allRank = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13};
     //a double loop that matches all ranks to suits as a card

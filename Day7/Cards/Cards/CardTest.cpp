@@ -9,12 +9,12 @@
 
 int main(int argc, const char * argv[]) {
     
-    //tests whether buildDeck works
+    //test whether buildDeck works
     std::vector<card> deck = {};
     deck = buildDeck(deck);
     assert(deck.size()==52);
     
-    //tests whether printCardsInDeck works
+    //test whether printCardsInDeck works
     printCardsInDeck(deck);
     
     

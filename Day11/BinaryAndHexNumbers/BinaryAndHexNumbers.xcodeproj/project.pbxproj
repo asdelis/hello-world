@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		EB5E74EB2AA27E1B00A25AF7 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EB5E74EA2AA27E1B00A25AF7 /* main.cpp */; };
+		EB5E75032AA7BBA100A25AF7 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EB5E75022AA7BBA100A25AF7 /* main.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		EB5E74E52AA27E1B00A25AF7 /* CopyFiles */ = {
+		EB5E74FD2AA7BBA100A25AF7 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
@@ -23,12 +23,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		EB5E74E72AA27E1B00A25AF7 /* BookAnalyzer */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = BookAnalyzer; sourceTree = BUILT_PRODUCTS_DIR; };
-		EB5E74EA2AA27E1B00A25AF7 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		EB5E74FF2AA7BBA100A25AF7 /* BinaryAndHexNumbers */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = BinaryAndHexNumbers; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB5E75022AA7BBA100A25AF7 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		EB5E74E42AA27E1B00A25AF7 /* Frameworks */ = {
+		EB5E74FC2AA7BBA100A25AF7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -38,65 +38,65 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		EB5E74DE2AA27E1B00A25AF7 = {
+		EB5E74F62AA7BBA100A25AF7 = {
 			isa = PBXGroup;
 			children = (
-				EB5E74E92AA27E1B00A25AF7 /* BookAnalyzer */,
-				EB5E74E82AA27E1B00A25AF7 /* Products */,
+				EB5E75012AA7BBA100A25AF7 /* BinaryAndHexNumbers */,
+				EB5E75002AA7BBA100A25AF7 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		EB5E74E82AA27E1B00A25AF7 /* Products */ = {
+		EB5E75002AA7BBA100A25AF7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				EB5E74E72AA27E1B00A25AF7 /* BookAnalyzer */,
+				EB5E74FF2AA7BBA100A25AF7 /* BinaryAndHexNumbers */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		EB5E74E92AA27E1B00A25AF7 /* BookAnalyzer */ = {
+		EB5E75012AA7BBA100A25AF7 /* BinaryAndHexNumbers */ = {
 			isa = PBXGroup;
 			children = (
-				EB5E74EA2AA27E1B00A25AF7 /* main.cpp */,
+				EB5E75022AA7BBA100A25AF7 /* main.cpp */,
 			);
-			path = BookAnalyzer;
+			path = BinaryAndHexNumbers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		EB5E74E62AA27E1B00A25AF7 /* BookAnalyzer */ = {
+		EB5E74FE2AA7BBA100A25AF7 /* BinaryAndHexNumbers */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = EB5E74EE2AA27E1B00A25AF7 /* Build configuration list for PBXNativeTarget "BookAnalyzer" */;
+			buildConfigurationList = EB5E75062AA7BBA100A25AF7 /* Build configuration list for PBXNativeTarget "BinaryAndHexNumbers" */;
 			buildPhases = (
-				EB5E74E32AA27E1B00A25AF7 /* Sources */,
-				EB5E74E42AA27E1B00A25AF7 /* Frameworks */,
-				EB5E74E52AA27E1B00A25AF7 /* CopyFiles */,
+				EB5E74FB2AA7BBA100A25AF7 /* Sources */,
+				EB5E74FC2AA7BBA100A25AF7 /* Frameworks */,
+				EB5E74FD2AA7BBA100A25AF7 /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = BookAnalyzer;
-			productName = BookAnalyzer;
-			productReference = EB5E74E72AA27E1B00A25AF7 /* BookAnalyzer */;
+			name = BinaryAndHexNumbers;
+			productName = BinaryAndHexNumbers;
+			productReference = EB5E74FF2AA7BBA100A25AF7 /* BinaryAndHexNumbers */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		EB5E74DF2AA27E1B00A25AF7 /* Project object */ = {
+		EB5E74F72AA7BBA100A25AF7 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastUpgradeCheck = 1430;
 				TargetAttributes = {
-					EB5E74E62AA27E1B00A25AF7 = {
+					EB5E74FE2AA7BBA100A25AF7 = {
 						CreatedOnToolsVersion = 14.3.1;
 					};
 				};
 			};
-			buildConfigurationList = EB5E74E22AA27E1B00A25AF7 /* Build configuration list for PBXProject "BookAnalyzer" */;
+			buildConfigurationList = EB5E74FA2AA7BBA100A25AF7 /* Build configuration list for PBXProject "BinaryAndHexNumbers" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -104,29 +104,29 @@
 				en,
 				Base,
 			);
-			mainGroup = EB5E74DE2AA27E1B00A25AF7;
-			productRefGroup = EB5E74E82AA27E1B00A25AF7 /* Products */;
+			mainGroup = EB5E74F62AA7BBA100A25AF7;
+			productRefGroup = EB5E75002AA7BBA100A25AF7 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				EB5E74E62AA27E1B00A25AF7 /* BookAnalyzer */,
+				EB5E74FE2AA7BBA100A25AF7 /* BinaryAndHexNumbers */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		EB5E74E32AA27E1B00A25AF7 /* Sources */ = {
+		EB5E74FB2AA7BBA100A25AF7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EB5E74EB2AA27E1B00A25AF7 /* main.cpp in Sources */,
+				EB5E75032AA7BBA100A25AF7 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		EB5E74EC2AA27E1B00A25AF7 /* Debug */ = {
+		EB5E75042AA7BBA100A25AF7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -184,7 +184,7 @@
 			};
 			name = Debug;
 		};
-		EB5E74ED2AA27E1B00A25AF7 /* Release */ = {
+		EB5E75052AA7BBA100A25AF7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -235,7 +235,7 @@
 			};
 			name = Release;
 		};
-		EB5E74EF2AA27E1B00A25AF7 /* Debug */ = {
+		EB5E75072AA7BBA100A25AF7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -243,7 +243,7 @@
 			};
 			name = Debug;
 		};
-		EB5E74F02AA27E1B00A25AF7 /* Release */ = {
+		EB5E75082AA7BBA100A25AF7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -254,25 +254,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		EB5E74E22AA27E1B00A25AF7 /* Build configuration list for PBXProject "BookAnalyzer" */ = {
+		EB5E74FA2AA7BBA100A25AF7 /* Build configuration list for PBXProject "BinaryAndHexNumbers" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				EB5E74EC2AA27E1B00A25AF7 /* Debug */,
-				EB5E74ED2AA27E1B00A25AF7 /* Release */,
+				EB5E75042AA7BBA100A25AF7 /* Debug */,
+				EB5E75052AA7BBA100A25AF7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		EB5E74EE2AA27E1B00A25AF7 /* Build configuration list for PBXNativeTarget "BookAnalyzer" */ = {
+		EB5E75062AA7BBA100A25AF7 /* Build configuration list for PBXNativeTarget "BinaryAndHexNumbers" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				EB5E74EF2AA27E1B00A25AF7 /* Debug */,
-				EB5E74F02AA27E1B00A25AF7 /* Release */,
+				EB5E75072AA7BBA100A25AF7 /* Debug */,
+				EB5E75082AA7BBA100A25AF7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = EB5E74DF2AA27E1B00A25AF7 /* Project object */;
+	rootObject = EB5E74F72AA7BBA100A25AF7 /* Project object */;
 }
