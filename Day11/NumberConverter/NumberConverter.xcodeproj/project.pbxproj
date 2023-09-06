@@ -7,11 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		EB5E75032AA7BBA100A25AF7 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EB5E75022AA7BBA100A25AF7 /* main.cpp */; };
+		EB5E751E2AA7E24B00A25AF7 /* NumberConverter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EB5E751C2AA7E24B00A25AF7 /* NumberConverter.cpp */; };
+		EB5E75202AA7E29700A25AF7 /* NumberConverterTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EB5E751F2AA7E29700A25AF7 /* NumberConverterTest.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		EB5E74FD2AA7BBA100A25AF7 /* CopyFiles */ = {
+		EB5E75102AA7E22800A25AF7 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
@@ -23,12 +24,14 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		EB5E74FF2AA7BBA100A25AF7 /* BinaryAndHexNumbers */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = BinaryAndHexNumbers; sourceTree = BUILT_PRODUCTS_DIR; };
-		EB5E75022AA7BBA100A25AF7 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		EB5E75122AA7E22800A25AF7 /* NumberConverter */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = NumberConverter; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB5E751C2AA7E24B00A25AF7 /* NumberConverter.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = NumberConverter.cpp; sourceTree = "<group>"; };
+		EB5E751D2AA7E24B00A25AF7 /* NumberConverter.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = NumberConverter.hpp; sourceTree = "<group>"; };
+		EB5E751F2AA7E29700A25AF7 /* NumberConverterTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NumberConverterTest.cpp; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		EB5E74FC2AA7BBA100A25AF7 /* Frameworks */ = {
+		EB5E750F2AA7E22800A25AF7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -38,65 +41,67 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		EB5E74F62AA7BBA100A25AF7 = {
+		EB5E75092AA7E22800A25AF7 = {
 			isa = PBXGroup;
 			children = (
-				EB5E75012AA7BBA100A25AF7 /* BinaryAndHexNumbers */,
-				EB5E75002AA7BBA100A25AF7 /* Products */,
+				EB5E75142AA7E22800A25AF7 /* NumberConverter */,
+				EB5E75132AA7E22800A25AF7 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		EB5E75002AA7BBA100A25AF7 /* Products */ = {
+		EB5E75132AA7E22800A25AF7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				EB5E74FF2AA7BBA100A25AF7 /* BinaryAndHexNumbers */,
+				EB5E75122AA7E22800A25AF7 /* NumberConverter */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		EB5E75012AA7BBA100A25AF7 /* BinaryAndHexNumbers */ = {
+		EB5E75142AA7E22800A25AF7 /* NumberConverter */ = {
 			isa = PBXGroup;
 			children = (
-				EB5E75022AA7BBA100A25AF7 /* main.cpp */,
+				EB5E751C2AA7E24B00A25AF7 /* NumberConverter.cpp */,
+				EB5E751D2AA7E24B00A25AF7 /* NumberConverter.hpp */,
+				EB5E751F2AA7E29700A25AF7 /* NumberConverterTest.cpp */,
 			);
-			path = BinaryAndHexNumbers;
+			path = NumberConverter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		EB5E74FE2AA7BBA100A25AF7 /* BinaryAndHexNumbers */ = {
+		EB5E75112AA7E22800A25AF7 /* NumberConverter */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = EB5E75062AA7BBA100A25AF7 /* Build configuration list for PBXNativeTarget "BinaryAndHexNumbers" */;
+			buildConfigurationList = EB5E75192AA7E22800A25AF7 /* Build configuration list for PBXNativeTarget "NumberConverter" */;
 			buildPhases = (
-				EB5E74FB2AA7BBA100A25AF7 /* Sources */,
-				EB5E74FC2AA7BBA100A25AF7 /* Frameworks */,
-				EB5E74FD2AA7BBA100A25AF7 /* CopyFiles */,
+				EB5E750E2AA7E22800A25AF7 /* Sources */,
+				EB5E750F2AA7E22800A25AF7 /* Frameworks */,
+				EB5E75102AA7E22800A25AF7 /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = BinaryAndHexNumbers;
-			productName = BinaryAndHexNumbers;
-			productReference = EB5E74FF2AA7BBA100A25AF7 /* BinaryAndHexNumbers */;
+			name = NumberConverter;
+			productName = NumberConverter;
+			productReference = EB5E75122AA7E22800A25AF7 /* NumberConverter */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		EB5E74F72AA7BBA100A25AF7 /* Project object */ = {
+		EB5E750A2AA7E22800A25AF7 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastUpgradeCheck = 1430;
 				TargetAttributes = {
-					EB5E74FE2AA7BBA100A25AF7 = {
+					EB5E75112AA7E22800A25AF7 = {
 						CreatedOnToolsVersion = 14.3.1;
 					};
 				};
 			};
-			buildConfigurationList = EB5E74FA2AA7BBA100A25AF7 /* Build configuration list for PBXProject "BinaryAndHexNumbers" */;
+			buildConfigurationList = EB5E750D2AA7E22800A25AF7 /* Build configuration list for PBXProject "NumberConverter" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -104,29 +109,30 @@
 				en,
 				Base,
 			);
-			mainGroup = EB5E74F62AA7BBA100A25AF7;
-			productRefGroup = EB5E75002AA7BBA100A25AF7 /* Products */;
+			mainGroup = EB5E75092AA7E22800A25AF7;
+			productRefGroup = EB5E75132AA7E22800A25AF7 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				EB5E74FE2AA7BBA100A25AF7 /* BinaryAndHexNumbers */,
+				EB5E75112AA7E22800A25AF7 /* NumberConverter */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		EB5E74FB2AA7BBA100A25AF7 /* Sources */ = {
+		EB5E750E2AA7E22800A25AF7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EB5E75032AA7BBA100A25AF7 /* main.cpp in Sources */,
+				EB5E751E2AA7E24B00A25AF7 /* NumberConverter.cpp in Sources */,
+				EB5E75202AA7E29700A25AF7 /* NumberConverterTest.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		EB5E75042AA7BBA100A25AF7 /* Debug */ = {
+		EB5E75172AA7E22800A25AF7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -184,7 +190,7 @@
 			};
 			name = Debug;
 		};
-		EB5E75052AA7BBA100A25AF7 /* Release */ = {
+		EB5E75182AA7E22800A25AF7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -235,7 +241,7 @@
 			};
 			name = Release;
 		};
-		EB5E75072AA7BBA100A25AF7 /* Debug */ = {
+		EB5E751A2AA7E22800A25AF7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -243,7 +249,7 @@
 			};
 			name = Debug;
 		};
-		EB5E75082AA7BBA100A25AF7 /* Release */ = {
+		EB5E751B2AA7E22800A25AF7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -254,25 +260,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		EB5E74FA2AA7BBA100A25AF7 /* Build configuration list for PBXProject "BinaryAndHexNumbers" */ = {
+		EB5E750D2AA7E22800A25AF7 /* Build configuration list for PBXProject "NumberConverter" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				EB5E75042AA7BBA100A25AF7 /* Debug */,
-				EB5E75052AA7BBA100A25AF7 /* Release */,
+				EB5E75172AA7E22800A25AF7 /* Debug */,
+				EB5E75182AA7E22800A25AF7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		EB5E75062AA7BBA100A25AF7 /* Build configuration list for PBXNativeTarget "BinaryAndHexNumbers" */ = {
+		EB5E75192AA7E22800A25AF7 /* Build configuration list for PBXNativeTarget "NumberConverter" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				EB5E75072AA7BBA100A25AF7 /* Debug */,
-				EB5E75082AA7BBA100A25AF7 /* Release */,
+				EB5E751A2AA7E22800A25AF7 /* Debug */,
+				EB5E751B2AA7E22800A25AF7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = EB5E74F72AA7BBA100A25AF7 /* Project object */;
+	rootObject = EB5E750A2AA7E22800A25AF7 /* Project object */;
 }
