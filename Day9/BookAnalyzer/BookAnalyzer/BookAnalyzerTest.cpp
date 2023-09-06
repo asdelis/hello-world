@@ -10,14 +10,14 @@
 int main(int argc, const char * argv[]) {
 
     //read in a file from the keyboard
-    std::string fileName = "mobyDick.txt";
-//    std::cout << "Please enter file you would like analyzed.\n";
-//    std::getline(std::cin, fileName);
+    std::string fileName;
+    std::cout << "Please enter file you would like analyzed.\n";
+    std::getline(std::cin, fileName);
     std::ifstream inFileStream(fileName);
     
-    std::string inputWord = "weltering";
-//    std::cout << "Please enter a word you would like analyzed.\n";
-//    std::cin >> inputWord;
+    std::string inputWord;
+    std::cout << "Please enter a word you would like analyzed.\n";
+    std::cin >> inputWord;
     
     //send an error message if the wrong one is typed in
     if (inFileStream.fail()) {

@@ -19,7 +19,7 @@ std::string findTitle(std::vector<std::string> allSentences){
         }
     }
     if (hasTitle == false){
-        std::cout << "Title Unknown";
+        std::cout << " Title Unknown \n";
     }
     return titleString;
 }
@@ -36,7 +36,7 @@ std::string findAuthor(std::vector<std::string> allSentences){
         }
     }
     if (hasAuthor == false) {
-        std::cout << "Author Unknown";
+        std::cout << " Author Unknown \n";
     }
     return authorString;
 }
