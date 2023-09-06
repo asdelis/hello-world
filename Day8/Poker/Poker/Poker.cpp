@@ -50,11 +50,11 @@ void printCardsInDeck(const std::vector<card>& deck){
 
 //no output, just shuffles the deck of cards that was made earlier
 //using the rand() function and the swap method
-void shuffleDeck(std::vector<card>& deck){
+void shuffleDeck(std::vector<card>& deck) {
     int randomPosition;
     card tempCard;
     for (int i = 0; i < 52; i++){
-        //find random position
+        //find a random position
         randomPosition = rand() % 52;
         //do the swap
         tempCard = deck[i];
@@ -73,13 +73,12 @@ std::vector<card> createHand(std::vector<card>& deck){
     return hand;
 }
 
-
 //checks to see if cards are all the same suit
 bool checkFlush(std::vector<card> hand){
-    bool isFlush = false;
+    bool isFlush = true;
     for (int i = 0; i < 4; i++) {
-        if(hand[i].suit == hand[i + 1].suit){
-            isFlush = true;
+        if(hand[i].suit != hand[i + 1].suit){
+            isFlush = false;
         }
     }
     return isFlush;
@@ -114,10 +113,10 @@ bool checkStraight(std::vector<card> hand){
     std::vector<int> justRanks = sortCardRank(hand);
     //checks to see if the difference between currect position in the vector (i)
     //and the next position in the vector (i + 1) is equal to one
-    bool isStraight = false;
+    bool isStraight = true;
     for (int i = 0; i < justRanks.size() - 1; i++) {
-        if (justRanks[i + 1] - justRanks[i] == 1) {
-            isStraight = true;
+        if (justRanks[i + 1] - justRanks[i] != 1) {
+            isStraight = false;
         }
     }
     return isStraight;
@@ -134,16 +133,13 @@ bool checkRoyalFlush(std::vector<card> hand){
 }
 
 bool checkFullHouse(std::vector<card> hand){
-    std::vector<std::string> justSuits = sortCardSuit(hand);
+    std::vector<int> justRanks = sortCardRank(hand);
     bool isFullHouse = false;
-    if (justSuits[0] == justSuits[1] && justSuits[1] == justSuits[2] && justSuits[3] == justSuits[4]) {
+    if (justRanks[0] == justRanks[1] && justRanks[1] == justRanks[2] && justRanks[3] == justRanks[4]) {
         isFullHouse = true;
     }
-    else if (justSuits[0] == justSuits[1] && justSuits[2] == justSuits[3] && justSuits[3] == justSuits[4]) {
+    else if (justRanks[0] == justRanks[1] && justRanks[2] == justRanks[3] && justRanks[3] == justRanks[4]) {
         isFullHouse = true;
-    }
-    else {
-        isFullHouse = false;
     }
     return isFullHouse;
 }

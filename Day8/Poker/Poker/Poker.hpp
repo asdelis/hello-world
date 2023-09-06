@@ -32,7 +32,7 @@ std::vector<card> createDeck(std::vector<card> deck);
 void printCardsInDeck(const std::vector<card>& deck);
 
 //shuffles the deck of cards
-void shuffleDeck (std::vector<card>& deck);
+void shuffleDeck(std::vector<card>& deck);
 
 //creates a hand
 std::vector<card> createHand(std::vector<card>& deck);
