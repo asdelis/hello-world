@@ -9,7 +9,9 @@
 #include <cstdint>
 #include <math.h>
 #include <iomanip>
+#include <fstream>
 
+//Function for approxEquals
 bool approxEquals( double a, double b, double tolerance ){
     bool isApproxEqual = true;
     float floatA = a;
@@ -19,6 +21,26 @@ bool approxEquals( double a, double b, double tolerance ){
         isApproxEqual = false;
     }
     return isApproxEqual;
+}
+//Function that prints out the characters and totals up how many were ascii
+//and how many are unicode
+void countChar(std::string fileName){
+    char c;
+    int numOfAscii = 0;
+    int numOfUnicode = 0;
+    std::ifstream inFileStream(fileName);
+    while( inFileStream >> c ){
+        if (c >= 0 && c <= 127) {
+            numOfAscii += 1;
+        }
+        else {
+            numOfUnicode += 1;
+        }
+        std::cout << c << "\n";
+    }
+    std::cout << "Number of ascii values: " << numOfAscii << "\n";
+    std::cout << "Number of unicode values: " << numOfUnicode << "\n";
+    inFileStream.close();
 }
 
 int main(int argc, const char * argv[]) {
@@ -104,6 +126,12 @@ int main(int argc, const char * argv[]) {
     std::cout << isApproxEqual << "\n";
     
     //PART 3
+    std::string fileName = "UTF-8-demo.txt";
+    countChar(fileName);
+    //Almost none of it was readable for me.
+    //Everything that wasn't an ascii value was garbled.
+    //I didn't expect this. I thought I was going to see some cool unicode characters.
+    //Maybe I did this portion wrong though.
     
     
     
