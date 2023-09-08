@@ -31,9 +31,9 @@ int main(int argc, const char * argv[]) {
     std::cout << uint16Size << "\n";
     //Starting with the unsigned types uint8_t, uint16_t, and uint64_t,
     //think about how you would write the min and max values for each type in binary.
-    uint8_t eightBitMax = pow(2, 4) - 1;
-    uint16_t sixteenBitMax = pow(2, sizeof(uint16_t) * 4) - 1;
-    uint64_t sixtyfourBitMax = pow(2, sizeof(uint64_t) * 4) - 1;
+    uint8_t eightBitMax = pow(2, 8) - 1;
+    uint16_t sixteenBitMax = pow(2, 16) - 1;
+    uint64_t sixtyfourBitMax = pow(2, 64) - 1;
     std::cout << eightBitMax << "\n";
     //in binary this would be 1111
     std::cout << sixteenBitMax << "\n";
@@ -49,9 +49,9 @@ int main(int argc, const char * argv[]) {
     std::cout << sixtyfourBitMin << "\n";
     //Define variables and assign them the min/max values using hexadecimal constants
     //and print them out to confirm that you're correct.
-    eightBitMax = 0xF;
-    sixteenBitMax = 0xFF;
-    sixtyfourBitMax = 0xFFFFFFFF;
+    eightBitMax = 0xFF;
+    sixteenBitMax = 0xFFFF;
+    sixtyfourBitMax = 0xFFFFFFFFFFFFFFFF;
     std::cout << eightBitMax << "\n";
     std::cout << sixteenBitMax << "\n";
     std::cout << sixtyfourBitMax << "\n";
@@ -73,6 +73,7 @@ int main(int argc, const char * argv[]) {
     std::cout << eightBitMax << "\n";
     std::cout << sixteenBitMax << "\n";
     std::cout << sixtyfourBitMax << "\n";
+    //they went to zero
     
     //Part 2
     double calc = 0.1 + 0.2;
