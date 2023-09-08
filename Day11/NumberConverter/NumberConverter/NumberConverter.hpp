@@ -24,3 +24,6 @@ std::string intToDecimalString(int numTwo);
 
 //converts an integer to a binary string
 std::string intToBinaryString(int decimal);
+
+//converts an integer to a hexadecimal string
+std::string intToHexString(int hexIntInput);

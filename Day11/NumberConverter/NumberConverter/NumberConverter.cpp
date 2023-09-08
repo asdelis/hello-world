@@ -45,10 +45,13 @@ int stringToInt(std::string input, int base) {
     return numValue;
 }
 
+
+
 //PART 2
 std::string intToDecimalString(int decimalIntInput){
-    //create a string
+    //create a set of strings
     std::string initialString = "";
+    std::string outputString;
     //initalize piece as the full amount, this will update everytime the loop ends
     int piece = decimalIntInput;
     while (piece > 0) {
@@ -62,8 +65,6 @@ std::string intToDecimalString(int decimalIntInput){
         //update piece
         piece /= 10;
     }
-    //create a new vector that we can use to reverse the order of decimalString
-    std::string outputString;
     //loop through the string and reverse its order
     for (int i = initialString.length(); i >= 0 ; i--) {
         outputString += initialString[i];
@@ -80,6 +81,22 @@ std::string intToBinaryString(int binaryIntInput){
         char remainderChar = remainder + '0';
         initialString += remainderChar;
         piece /= 2;
+    }
+    std::string outputString;
+    for (int i = initialString.length(); i >= 0 ; i--) {
+        outputString += initialString[i];
+    }
+    return outputString;
+}
+
+std::string intToHexString(int hexIntInput){
+    std::string initialString = "";
+    int piece = hexIntInput;
+    while (piece > 0) {
+        int remainder = piece % 16;
+        char remainderChar = remainder + 'a' - 10;
+        initialString += remainderChar;
+        piece /= 16;
     }
     std::string outputString;
     for (int i = initialString.length(); i >= 0 ; i--) {
