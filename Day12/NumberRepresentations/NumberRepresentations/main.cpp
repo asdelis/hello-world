@@ -132,10 +132,5 @@ int main(int argc, const char * argv[]) {
     //Everything that wasn't an ascii value was garbled.
     //I didn't expect this. I thought I was going to see some cool unicode characters.
     //Maybe I did this portion wrong though.
-    
-    
-    
-    
-    
     return 0;
 }
