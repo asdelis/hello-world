@@ -36,14 +36,14 @@ using std::string;
  *   GetBit(-42, 31) -> returns true
  */
 bool GetBit( uint32_t input, int b ) {
-    bool isSet = true;
-    int leftShiftCount = 31 - b;
-    b <<= leftShiftCount;
-    b >>= 31;
-    if (b == 0x0) {
-        isSet = false;
+    bool isOne = true;
+    int leftShift = 31 - b;
+    input <<= leftShift;
+    input >>= 31;
+    if (input == 0x0000) {
+        isOne = false;
     }
-  return isSet;
+  return isOne;
 }
 
 
@@ -58,9 +58,12 @@ bool GetBit( uint32_t input, int b ) {
  * Returns:
  *   Whether or not the int is negative
  */
-bool IsNegative( int input )
-{
-  // TODO: Fill in. Do not return false.
+bool IsNegative( int input ) {
+    bool isOne = false;
+    int newInput = input & 0x8000;
+    if (newInput == 0x8000) {
+        isOne = true;
+    }
   return false;
 }
 
