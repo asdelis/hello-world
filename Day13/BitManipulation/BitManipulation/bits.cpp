@@ -59,12 +59,12 @@ bool GetBit( uint32_t input, int b ) {
  *   Whether or not the int is negative
  */
 bool IsNegative( int input ) {
-    bool isOne = false;
-    int newInput = input & 0x8000;
-    if (newInput == 0x8000) {
-        isOne = true;
+    bool isOne = true  ;
+    int newInput = input & 0x80000000;
+    if (newInput != 0x80000000) {
+        isOne = false;
     }
-  return false;
+  return newInput;
 }
 
 /*
@@ -81,10 +81,18 @@ bool IsNegative( int input ) {
  *   NumBitsSet(64) -> returns 1
  *   NumBitsSet(-1) -> returns 32
  */
-int NumBitsSet( uint32_t input )
-{
-  // TODO: Fill in. Do not return 0.
-  return 0;
+int NumBitsSet( uint32_t input ) {
+    int numBitsSet = 0;
+    for (int i = 0; i < 32; i++) {
+        int newInput = input >> i;
+        if ((newInput & 0x0001) == 0x0001) {
+            numBitsSet += 1;
+        }
+        else {
+            numBitsSet += 0;
+        }
+    }
+  return numBitsSet;
 }
 
 
@@ -104,10 +112,23 @@ int NumBitsSet( uint32_t input )
  *   GetByte( 0x1234abcd, 0 ) -> returns 0xcd (205 as unsigned char)
  *   GetByte( 0x1234abcd, 3 ) -> returns 0x12 (18 as an unsigned char)
  */
-unsigned char GetByte( uint32_t input, int b )
-{
-  // TODO: Fill in. Do not return 0.
-  return 0;
+unsigned char GetByte( uint32_t input, int b ) {
+    if (b == 0) {
+        input &= 0xFF;
+    }
+    else if (b == 1){
+        input &= 0xFF00;
+        input >>= 8;
+    }
+    else if (b == 2){
+        input &= 0xFF0000;
+        input >>= 16;
+    }
+    else if (b == 3){
+        input &= 0xFF000000;
+        input >>= 24;
+    }
+  return input;
 }
 
 
@@ -129,10 +150,28 @@ unsigned char GetByte( uint32_t input, int b )
  *   SetByte( (unsigned int)-1, 0, 2 ) -> returns 0xff00ffff (4278255615 as unsigned int)
  *   SetByte( 0xabcd, 7, 1 )           -> returns 0x7cd (1997 as unsigned int)
  */
-uint32_t SetByte( uint32_t input, uint8_t value, int b )
-{
-  // TODO: Fill in. Do not return 0.
-  return 0;
+uint32_t SetByte( uint32_t input, uint8_t value, int b ) {
+    int shiftedValue = value;
+    if (b == 0) {
+        input &= 0xFFFFFF00;
+        input |= value;
+    }
+    else if (b == 1){
+        input &= 0xFFFF00FF;
+        shiftedValue <<= 8;
+        input |= shiftedValue;
+    }
+    else if (b == 2){
+        input &= 0xFF00FFFF;
+        shiftedValue <<= 16;
+        input |= shiftedValue;
+    }
+    else if (b == 3){
+        input &= 0x00FFFFFF;
+        shiftedValue <<= 24;
+        input |= shiftedValue;
+    }
+  return input;
 }
 
 
