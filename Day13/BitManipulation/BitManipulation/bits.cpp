@@ -199,12 +199,17 @@ uint32_t SetByte( uint32_t input, uint8_t value, int b ) {
  *   Negate(5) -> returns -5
  *   Negate(-1) -> returns 1
  */
-int Negate( int input )
-{
-  // Note, it may help to do the challenge question (see below) before implementing this one...
-
-  // TODO: Fill in. Do not return 0.
-  return 0;
+int Negate( int input ) {
+    input = ~input;
+    int carry = 1;
+    //finds the positions that need a carry
+    while ((input & carry) >= 1) {
+        input = (input ^ carry);
+        carry <<= 1;
+    }
+    input = (input ^ carry);
+  return input;
+  return input;
 }
 
 
@@ -215,7 +220,14 @@ int Negate( int input )
  * This function should return x + 1 but should only make use of bitwise operators and == or !=
 */
 int Increment( uint32_t x ){
-  return 0;
+    int carry = 1;
+    //finds the positions that need a carry
+    while ((x & carry) >= 1) {
+        x = (x ^ carry);
+        carry <<= 1;
+    }
+    x = (x ^ carry);
+  return x;
 }
 
 
