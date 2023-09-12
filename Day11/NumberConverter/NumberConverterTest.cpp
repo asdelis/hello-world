@@ -41,7 +41,7 @@ int main(int argc, const char * argv[]) {
     }
     //Integer to Binary
     int binaryIntInput;
-    std::cout << "Please enter another number in its decimal form: \n";
+    std::cout << "Please enter another number in its decimal form that you would like converted to binary: \n";
     std::cin >> binaryIntInput;
     std::string binaryString;
     //test intToDecimalString
@@ -55,7 +55,7 @@ int main(int argc, const char * argv[]) {
     }
     //Integer to Hex
     int hexIntInput;
-    std::cout << "Please enter another number in its decimal form: \n";
+    std::cout << "Please enter another number in its decimal form that you would like converted to hexadecimal: \n";
     std::cin >> hexIntInput;
     std::string hexString;
     //test intToDecimalString
