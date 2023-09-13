@@ -1,8 +1,8 @@
 //
 //  main.cpp
-//  PointerPracticeTest
+//  DiyVector
 //
-//  Created by Andrew Delis on 9/12/23.
+//  Created by Andrew Delis on 9/13/23.
 //
 
 #include <iostream>

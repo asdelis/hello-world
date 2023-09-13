@@ -10,19 +10,19 @@ struct myVector {
 //Next, write a function called arrayModSum that takes as
 //arguments a reference to a MyVector variable (MyVector& someVar)
 //and the size of the array inside that variable.
-float arrayModSum(myVector& originalMyVector, int arraySize) {
+double arrayModSum(myVector& originalMyVector, int arraySize) {
 	//enter size of the
 	originalMyVector.size = arraySize;
 	originalMyVector.capacity = originalMyVector.size;
 	//adds one to every place in the existing array
 	//and stores it is a new one called updatedMyVector
-	for (int i = 0; i < 10; i++) {
+	for (int i = 0; i < arraySize; i++) {
 		originalMyVector.data[i] += 1.0;
 	}
 	//sums up the contents of updatedMyVector
 	float sum = 0;
-	for (int i = 0; i < 10; i++) {
-		sum += i;
+	for (int i = 0; i < arraySize; i++) {
+		sum += originalMyVector.data[i];
 	}
 	return sum;
 }
@@ -32,7 +32,7 @@ int main() {
 	myVector vec1;
 
 	//read in the array size
-	int arraySize	= 10;
+	int arraySize = 10;
 	vec1.size = arraySize;
 
 	//then allocate an array on the heap using new
@@ -53,7 +53,7 @@ int main() {
 	//Next, write a function called arrayModSum that takes as
 	//arguments a reference to a MyVector variable (MyVector& someVar)
 	//and the size of the array inside that variable.
-	int sum = arrayModSum(vec1, 10);
+	double sum = arrayModSum(vec1, 10);
 
 	//Print out the returned sum in main.
 	std::cout << sum;
@@ -62,4 +62,5 @@ int main() {
 	delete[] vec1.data;
 	vec1.data = nullptr;
 
+	return 0;
 }
