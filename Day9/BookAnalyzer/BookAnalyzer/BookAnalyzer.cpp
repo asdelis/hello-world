@@ -78,7 +78,7 @@ std::string findMaxWord(std::vector<std::string> allWords){
     return maxWord;
 }
 
-//
+//counts number of instances of the input word
 int countInputWord(std::vector<std::string> allWords, std::string inputWord){
     int inputWordCount = 0;
     for (int i = 0; i < allWords.size(); i++){
@@ -89,15 +89,15 @@ int countInputWord(std::vector<std::string> allWords, std::string inputWord){
     return inputWordCount;
 }
 
-//
+//prints the two surrounding words
 void printSurroundingWords(std::vector<std::string> allWords, std::string inputWord){
-    std::string space = " ";
     std::string combinedString;
     float wordPlace;
     for (float i = 0; i < allWords.size(); i++){
         if (inputWord == allWords[i]) {
+            //finds location in the book
             wordPlace = (i / allWords.size()) * 100;
-            combinedString = allWords[i-1] + space + allWords[i] + space + allWords[i+1];
+            combinedString = allWords[i-1] + " " + allWords[i] + " " + allWords[i+1];
             std:: cout << "  at " << wordPlace << "%: " << combinedString << "\n";
         }
     }

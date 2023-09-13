@@ -13,7 +13,7 @@
 int stringToInt(std::string input, int base) {
     int numValue = 0;
     //first see if the number is negative
-    //binary and hexadecimal numbers can't be made negative with this sign: '-'
+    //binary and hexadecimal inputs can't be made negative with the minus sign
     //so we only need to check this for decimal numbers entered into our string
     if (input[0] == '-') {
         for (int i = 1; i < input.length(); i++) {
@@ -50,6 +50,8 @@ int stringToInt(std::string input, int base) {
 //PART 2
 std::string intToDecimalString(int decimalIntInput){
     //create a set of strings
+    //initial is used for our initial calculation
+    //output is the string returned after the string has been reversed
     std::string initialString = "";
     std::string outputString;
     //initalize piece as the full amount, this will update everytime the loop ends

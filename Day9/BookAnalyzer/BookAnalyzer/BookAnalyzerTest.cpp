@@ -61,14 +61,4 @@ int main(int argc, const char * argv[]) {
 }
 
 
-//Statistics for Moby Dick; or The Whale by Herman Melville:
-//  Number of words: 215823
-//  Number of characters: 1033227
-//  The shortest word is "a", and the longest word is "matches?—tinder?—gunpowder?—what"
-//
-//The word "weltering" appears 3 times:
-//  at 4%: "ship weltering there"
-//  at 40%: "up weltering astern."
-//  at 97%: "the weltering sea."
-
 

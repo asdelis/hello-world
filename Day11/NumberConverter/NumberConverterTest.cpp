@@ -39,12 +39,12 @@ int main(int argc, const char * argv[]) {
         decimalString = intToDecimalString(-1 * decimalIntInput);
         std::cout << "-" << decimalString << "\n";
     }
+    
     //Integer to Binary
     int binaryIntInput;
     std::cout << "Please enter another number in its decimal form that you would like converted to binary: \n";
     std::cin >> binaryIntInput;
     std::string binaryString;
-    //test intToDecimalString
     if (binaryIntInput >= 0) {
         binaryString = intToBinaryString(binaryIntInput);
         std::cout << binaryString << "\n";
@@ -53,6 +53,7 @@ int main(int argc, const char * argv[]) {
         binaryString = intToBinaryString(-1 * binaryIntInput);
         std::cout << "-" << binaryString << "\n";
     }
+    
     //Integer to Hex
     int hexIntInput;
     std::cout << "Please enter another number in its decimal form that you would like converted to hexadecimal: \n";
