@@ -12,6 +12,33 @@
 
 #endif /* DiyVector_hpp */
 
+//Class name and contents
+class MyVector{
+    
+public:
+    //constructors
+    MyVector();
+    MyVector(size_t capacity);
+    MyVector(int* inputData, size_t size);
+    //destructor
+    ~MyVector();
+    
+    //methods
+    size_t size();
+    void push_back(int val);
+    void pop_back();
+    //set(myVec, index, newValue)
+    //growVector(myVec)
+    //getSize()
+    //getCapacity()
+    
+private:
+    int* data;
+    size_t size_;
+    size_t capacity_;
+    void growVector();
+};
+
 //makeVector(initialCapacity ) -- return a vector with the given capacity and a size of 0
 //^ constructor
 

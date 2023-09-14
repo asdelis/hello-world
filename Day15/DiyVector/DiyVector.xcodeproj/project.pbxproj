@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		EB5E75692AB2635500A25AF7 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EB5E75682AB2635500A25AF7 /* main.cpp */; };
+		EB5E75732AB2709000A25AF7 /* DiyVector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EB5E75712AB2709000A25AF7 /* DiyVector.cpp */; };
+		EB5E75752AB270D900A25AF7 /* DiyVectorTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EB5E75742AB270D900A25AF7 /* DiyVectorTest.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,7 +25,9 @@
 
 /* Begin PBXFileReference section */
 		EB5E75652AB2635500A25AF7 /* DiyVector */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = DiyVector; sourceTree = BUILT_PRODUCTS_DIR; };
-		EB5E75682AB2635500A25AF7 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		EB5E75712AB2709000A25AF7 /* DiyVector.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = DiyVector.cpp; sourceTree = "<group>"; };
+		EB5E75722AB2709000A25AF7 /* DiyVector.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = DiyVector.hpp; sourceTree = "<group>"; };
+		EB5E75742AB270D900A25AF7 /* DiyVectorTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DiyVectorTest.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +60,9 @@
 		EB5E75672AB2635500A25AF7 /* DiyVector */ = {
 			isa = PBXGroup;
 			children = (
-				EB5E75682AB2635500A25AF7 /* main.cpp */,
+				EB5E75742AB270D900A25AF7 /* DiyVectorTest.cpp */,
+				EB5E75712AB2709000A25AF7 /* DiyVector.cpp */,
+				EB5E75722AB2709000A25AF7 /* DiyVector.hpp */,
 			);
 			path = DiyVector;
 			sourceTree = "<group>";
@@ -119,7 +124,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EB5E75692AB2635500A25AF7 /* main.cpp in Sources */,
+				EB5E75732AB2709000A25AF7 /* DiyVector.cpp in Sources */,
+				EB5E75752AB270D900A25AF7 /* DiyVectorTest.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
