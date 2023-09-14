@@ -37,8 +37,10 @@ using std::string;
  */
 bool GetBit( uint32_t input, int b ) {
     bool isOne = true;
+    //shift the bit left b number of times
     int leftShift = 31 - b;
     input <<= leftShift;
+    //shift the bit to the right to return either a 0 or a 1
     input >>= 31;
     if (input == 0x0000) {
         isOne = false;
@@ -60,7 +62,9 @@ bool GetBit( uint32_t input, int b ) {
  */
 bool IsNegative( int input ) {
     bool isOne = true  ;
+    //0x80000000 is one with a bunch of zeros behind it
     int newInput = input & 0x80000000;
+    //if you use & with any number and 0x80000000 it will isolate the left most bit or the sign
     if (newInput != 0x80000000) {
         isOne = false;
     }
@@ -83,6 +87,8 @@ bool IsNegative( int input ) {
  */
 int NumBitsSet( uint32_t input ) {
     int numBitsSet = 0;
+    //loop through the number and checks to see if the farthest right number is set
+    //then shifts the number right and checks again
     for (int i = 0; i < 32; i++) {
         int newInput = input >> i;
         if ((newInput & 0x0001) == 0x0001) {
@@ -113,6 +119,7 @@ int NumBitsSet( uint32_t input ) {
  *   GetByte( 0x1234abcd, 3 ) -> returns 0x12 (18 as an unsigned char)
  */
 unsigned char GetByte( uint32_t input, int b ) {
+    //isolate a bit based on b and output the result after shifting it to the right
     if (b == 0) {
         input &= 0xFF;
     }
@@ -151,6 +158,9 @@ unsigned char GetByte( uint32_t input, int b ) {
  *   SetByte( 0xabcd, 7, 1 )           -> returns 0x7cd (1997 as unsigned int)
  */
 uint32_t SetByte( uint32_t input, uint8_t value, int b ) {
+    //isolate the bit and zero it out
+    //shift the value if needed
+    //replace the zeroed out value with value
     int shiftedValue = value;
     if (b == 0) {
         input &= 0xFFFFFF00;
@@ -200,15 +210,18 @@ uint32_t SetByte( uint32_t input, uint8_t value, int b ) {
  *   Negate(-1) -> returns 1
  */
 int Negate( int input ) {
+    //flip bits
     input = ~input;
     int carry = 1;
     //finds the positions that need a carry
     while ((input & carry) >= 1) {
+        //mimic addition
         input = (input ^ carry);
+        //shift the carry
         carry <<= 1;
     }
+    //do one last addition mimic
     input = (input ^ carry);
-  return input;
   return input;
 }
 
@@ -223,9 +236,11 @@ int Increment( uint32_t x ){
     int carry = 1;
     //finds the positions that need a carry
     while ((x & carry) >= 1) {
+        //mimic addition
         x = (x ^ carry);
         carry <<= 1;
     }
+    //do one last addition mimic
     x = (x ^ carry);
   return x;
 }
