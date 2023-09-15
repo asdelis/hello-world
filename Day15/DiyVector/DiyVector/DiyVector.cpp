@@ -43,8 +43,13 @@ MyVector::~MyVector(){
 }
 
 //.size method
-size_t MyVector::size() {
+size_t MyVector::getSize() {
     return size_;
+}
+
+//.size method
+size_t MyVector::getCapacity() {
+    return capacity_;
 }
 
 //.push_back method
@@ -58,7 +63,7 @@ void MyVector::push_back(int val) {
 
 //grow vector private function called in the push_back method
 void MyVector::growVector(){
-    //create a new arra
+    //create a new array
     int* temp = new int[2 * capacity_];
     for (int i = 0; i < size_; i++) {
         temp[i] = data[i];
@@ -69,3 +74,20 @@ void MyVector::growVector(){
     //to update the int in the class
     capacity_ *= 2;
 }
+
+//.pop_back method
+void MyVector::pop_back() {
+    size_--;
+}
+
+//returns the value at the indicated index place
+int MyVector::get(int index){
+    return data[index];
+}
+
+//changes the value of an indicated index place
+void MyVector::set(int index, int newValue){
+    data[index] = newValue;
+}
+
+
