@@ -7,11 +7,12 @@
 
 #ifndef DiyVector_hpp
 #define DiyVector_hpp
-
 #include <stdio.h>
+#include <cassert>
 
 #endif /* DiyVector_hpp */
 
+//PART 1
 //Class name and contents
 class MyVector{
     
@@ -32,6 +33,12 @@ public:
     int get(int index);
     void set(int index, int newValue);
     
+    //PART 2 Operator Overloads
+    int& operator[](size_t index);
+    const int& operator[](size_t index) const;
+    MyVector& operator=(const MyVector& rhs);
+    
+    
     
 private:
     int* data;
@@ -40,12 +47,12 @@ private:
     void growVector();
 };
 
+//PART 2 To do:
 
-
-//get(myVec, index) -- return the appropriate value in the vector
-//works like [] does for std::vectors
-//^ method
-
-//set(myVec, index, newValue) -- set the appropriate value in the vector
-//(works like [] for std::vector)
-//^ method
+//copy constructor
+//operator ==
+// !=
+// <
+// <=
+// >
+// >=

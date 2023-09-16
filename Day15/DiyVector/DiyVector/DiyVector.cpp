@@ -8,14 +8,14 @@
 #include "DiyVector.hpp"
 
 //constructor that takes not argument
-MyVector::MyVector(){
+MyVector::MyVector() {
     size_ = 0;
     capacity_ = 10;
     data = new int[capacity_];
 }
 
 //constructor that takes an array as an argument
-MyVector::MyVector(size_t capacity){
+MyVector::MyVector(size_t capacity) {
     if (capacity > 0) {
         size_ = 0;
         capacity_ = capacity;
@@ -24,7 +24,7 @@ MyVector::MyVector(size_t capacity){
 }
 
 //constructor that reads in an array
-MyVector::MyVector(int* inputData, size_t size){
+MyVector::MyVector(int* inputData, size_t size) {
     size_ = 0;
     capacity_ = 10;
     data = new int[capacity_];
@@ -36,7 +36,7 @@ MyVector::MyVector(int* inputData, size_t size){
 }
 
 //destructor
-MyVector::~MyVector(){
+MyVector::~MyVector() {
     size_ = 0;
     capacity_ = 0;
     delete[] data;
@@ -62,7 +62,7 @@ void MyVector::push_back(int val) {
 }
 
 //grow vector private function called in the push_back method
-void MyVector::growVector(){
+void MyVector::growVector() {
     //create a new array
     int* temp = new int[2 * capacity_];
     for (int i = 0; i < size_; i++) {
@@ -81,13 +81,32 @@ void MyVector::pop_back() {
 }
 
 //returns the value at the indicated index place
-int MyVector::get(int index){
+int MyVector::get(int index) {
     return data[index];
 }
 
 //changes the value of an indicated index place
-void MyVector::set(int index, int newValue){
+void MyVector::set(int index, int newValue) {
     data[index] = newValue;
 }
 
+//PART 2
+//overload the [] operator
+int& MyVector::operator[](size_t index) {
+    assert(index < size_ && "Operator is not in range");
+    return data[index];
+}
+const int& MyVector::operator[](size_t index) const {
+    assert(index < size_ && "Operator is not in range");
+    return data[index];
+}
+
+//operator= that does a deep copy
+MyVector& MyVector::operator=(const MyVector& rhs) {
+    if (this != &rhs) {
+        delete[] data;
+        capacity_ = 2 * size_;
+    }
+    return *this;
+}
 
