@@ -21,13 +21,14 @@ public:
     MyVector();
     MyVector(size_t capacity);
     MyVector(int* inputData, size_t size);
+    MyVector(const MyVector& rhs);
     
     //destructor
     ~MyVector();
     
     //methods
-    size_t getSize();
-    size_t getCapacity();
+    size_t getSize() const;
+    size_t getCapacity() const;
     void push_back(int val);
     void pop_back();
     int get(int index);
@@ -37,8 +38,12 @@ public:
     int& operator[](size_t index);
     const int& operator[](size_t index) const;
     MyVector& operator=(const MyVector& rhs);
-    
-    
+    bool operator==(const MyVector& rhs);
+    bool operator!=(const MyVector& rhs);
+    bool operator<(const MyVector& rhs);
+    bool operator<=(const MyVector& rhs);
+    bool operator>(const MyVector& rhs);
+    bool operator>=(const MyVector& rhs);
     
 private:
     int* data;
@@ -48,10 +53,6 @@ private:
 };
 
 //PART 2 To do:
-
-//copy constructor
-//operator ==
-// !=
 // <
 // <=
 // >

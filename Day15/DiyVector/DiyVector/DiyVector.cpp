@@ -43,12 +43,12 @@ MyVector::~MyVector() {
 }
 
 //.size method
-size_t MyVector::getSize() {
+size_t MyVector::getSize() const {
     return size_;
 }
 
 //.size method
-size_t MyVector::getCapacity() {
+size_t MyVector::getCapacity() const{
     return capacity_;
 }
 
@@ -105,8 +105,111 @@ const int& MyVector::operator[](size_t index) const {
 MyVector& MyVector::operator=(const MyVector& rhs) {
     if (this != &rhs) {
         delete[] data;
+        size_ = rhs.getSize();
         capacity_ = 2 * size_;
+        if (capacity_ > 0) {
+            data = new int[capacity_];
+            for (size_t i = 0; i < rhs.getSize(); i++) {
+                data[i] = rhs[i];
+            }
+        }
     }
     return *this;
+}
+
+//copy constructor that does a deep copy
+MyVector::MyVector(const MyVector& rhs) {
+    if (this != &rhs) {
+        delete[] data;
+        size_ = rhs.getSize();
+        capacity_ = 2 * size_;
+        if (capacity_ > 0) {
+            data = new int[capacity_];
+            for (size_t i = 0; i < rhs.getSize(); i++) {
+                data[i] = rhs[i];
+            }
+        }
+    }
+}
+
+//operator== that sees if two vectors are equal
+bool MyVector::operator==(const MyVector& rhs) {
+    bool isEqual = true;
+    if (size_ != rhs.size_){
+        isEqual = false;
+    }
+    else {
+        for (int i = 0; i < rhs.getSize(); i++) {
+            if (data[i] == rhs[i]) {
+                isEqual = true;
+            }
+        }
+    }
+    return isEqual;
+}
+
+//operator!= that sees if two vectors are equal
+bool MyVector::operator!=(const MyVector& rhs) {
+    bool isNotEqual = false;
+    if (size_ == rhs.size_){
+        isNotEqual = false;
+    }
+    else {
+        for (int i = 0; i < rhs.getSize(); i++) {
+            if (data[i] != rhs[i]) {
+                isNotEqual = true;
+            }
+        }
+    }
+    return isNotEqual;
+}
+
+//operator< that loops through and returns whether the left hand side
+//is less than the right hand side lexographically
+bool MyVector::operator<(const MyVector& rhs) {
+    assert(size_ == rhs.size_ && "The size of the vectors must be the same");
+    bool isLessThan = false;
+    for (int i = 0; i < rhs.getSize(); i++) {
+        if (data[i] < rhs[i]) {
+            isLessThan = true;
+        }
+    }
+    return isLessThan;
+}
+
+//operator<=
+bool MyVector::operator<=(const MyVector& rhs) {
+    assert(size_ == rhs.size_ && "The size of the vectors must be the same");
+    bool isLessThanOrEqual = false;
+    for (int i = 0; i < rhs.getSize(); i++) {
+        if (data[i] <= rhs[i]) {
+            isLessThanOrEqual = true;
+        }
+    }
+    return isLessThanOrEqual;
+}
+
+//operator>
+bool MyVector::operator>(const MyVector& rhs) {
+    assert(size_ == rhs.size_ && "The size of the vectors must be the same");
+    bool isLessThan = false;
+    for (int i = 0; i < rhs.getSize(); i++) {
+        if (data[i] > rhs[i]) {
+            isLessThan = true;
+        }
+    }
+    return isLessThan;
+}
+
+//operator>=
+bool MyVector::operator>=(const MyVector& rhs) {
+    assert(size_ == rhs.size_ && "The size of the vectors must be the same");
+    bool isLessThan = false;
+    for (int i = 0; i < rhs.getSize(); i++) {
+        if (data[i] >= rhs[i]) {
+            isLessThan = true;
+        }
+    }
+    return isLessThan;
 }
 
