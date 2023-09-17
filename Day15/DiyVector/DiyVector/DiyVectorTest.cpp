@@ -6,3 +6,14 @@
 //
 
 #include "DiyVector.hpp"
+
+int main() {
+    //test constructors
+    MyVector v1;
+    
+    //test destructor
+    
+    //test PART 1 methods
+    
+    //test PART 2 methods
+}

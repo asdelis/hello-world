@@ -7,8 +7,9 @@
 
 #include "DiyVector.hpp"
 
-//constructor that takes not argument
+//constructor that takes no argument
 MyVector::MyVector() {
+    std::cout << "hello from the constructor" << "\n";
     size_ = 0;
     capacity_ = 10;
     data = new int[capacity_];

@@ -9,6 +9,7 @@
 #define DiyVector_hpp
 #include <stdio.h>
 #include <cassert>
+#include <iostream>
 
 #endif /* DiyVector_hpp */
 
