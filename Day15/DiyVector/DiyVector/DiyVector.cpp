@@ -20,8 +20,8 @@ MyVector::MyVector(size_t capacity) {
     std::cout << "hello from the constructor" << "\n";
     if (capacity > 0) {
         size_ = 0;
-        capacity_ = capacity;
         data = new int[capacity_];
+        capacity_ = capacity;
     }
 }
 
@@ -29,10 +29,10 @@ MyVector::MyVector(size_t capacity) {
 MyVector::MyVector(int* inputData, size_t size) {
     std::cout << "hello from the constructor" << "\n";
     size_ = 0;
-    capacity_ = 10;
     data = new int[capacity_];
+    capacity_ = 10;
     if (inputData != nullptr) {
-        for (int i = 0; i > size; i++){
+        for (int i = 0; i < size; i++){
             push_back(inputData[i]);
         }
     }
