@@ -138,7 +138,7 @@ MyVector::MyVector(const MyVector& rhs) {
 }
 
 //operator== that sees if two vectors are equal
-bool MyVector::operator==(const MyVector& rhs) {
+bool MyVector::operator==(const MyVector& rhs) const {
     bool isEqual = true;
     if (size_ != rhs.size_){
         isEqual = false;
@@ -154,10 +154,10 @@ bool MyVector::operator==(const MyVector& rhs) {
 }
 
 //operator!= that sees if two vectors are equal
-bool MyVector::operator!=(const MyVector& rhs) {
+bool MyVector::operator!=(const MyVector& rhs) const {
     bool isNotEqual = false;
-    if (size_ == rhs.size_){
-        isNotEqual = false;
+    if (size_ != rhs.size_){
+        isNotEqual = true;
     }
     else {
         for (int i = 0; i < rhs.getSize(); i++) {
@@ -171,7 +171,7 @@ bool MyVector::operator!=(const MyVector& rhs) {
 
 //operator< that loops through and returns whether the left hand side
 //is less than the right hand side lexographically
-bool MyVector::operator<(const MyVector& rhs) {
+bool MyVector::operator<(const MyVector& rhs) const {
     assert(size_ == rhs.size_ && "The size of the vectors must be the same");
     bool isLessThan = false;
     for (int i = 0; i < rhs.getSize(); i++) {
@@ -183,7 +183,7 @@ bool MyVector::operator<(const MyVector& rhs) {
 }
 
 //operator<=
-bool MyVector::operator<=(const MyVector& rhs) {
+bool MyVector::operator<=(const MyVector& rhs) const {
     assert(size_ == rhs.size_ && "The size of the vectors must be the same");
     bool isLessThanOrEqual = false;
     for (int i = 0; i < rhs.getSize(); i++) {
@@ -195,7 +195,7 @@ bool MyVector::operator<=(const MyVector& rhs) {
 }
 
 //operator>
-bool MyVector::operator>(const MyVector& rhs) {
+bool MyVector::operator>(const MyVector& rhs) const {
     assert(size_ == rhs.size_ && "The size of the vectors must be the same");
     bool isLessThan = false;
     for (int i = 0; i < rhs.getSize(); i++) {
@@ -207,7 +207,7 @@ bool MyVector::operator>(const MyVector& rhs) {
 }
 
 //operator>=
-bool MyVector::operator>=(const MyVector& rhs) {
+bool MyVector::operator>=(const MyVector& rhs) const {
     assert(size_ == rhs.size_ && "The size of the vectors must be the same");
     bool isLessThan = false;
     for (int i = 0; i < rhs.getSize(); i++) {

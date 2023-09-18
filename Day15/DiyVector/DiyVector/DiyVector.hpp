@@ -39,12 +39,12 @@ public:
     int& operator[](size_t index);
     const int& operator[](size_t index) const;
     MyVector& operator=(const MyVector& rhs);
-    bool operator==(const MyVector& rhs);
-    bool operator!=(const MyVector& rhs);
-    bool operator<(const MyVector& rhs);
-    bool operator<=(const MyVector& rhs);
-    bool operator>(const MyVector& rhs);
-    bool operator>=(const MyVector& rhs);
+    bool operator==(const MyVector& rhs) const;
+    bool operator!=(const MyVector& rhs) const;
+    bool operator<(const MyVector& rhs) const;
+    bool operator<=(const MyVector& rhs) const;
+    bool operator>(const MyVector& rhs) const;
+    bool operator>=(const MyVector& rhs) const;
     
 private:
     int* data;
@@ -53,8 +53,3 @@ private:
     void growVector();
 };
 
-//PART 2 To do:
-// <
-// <=
-// >
-// >=

@@ -85,16 +85,31 @@ int main() {
     MyVector v5(testArray2, 10);
     int testArray3[] = {1,2,3,4,5,5,4,3,2,1};
     MyVector v6(testArray3, 10);
-    
     //testing operator[]
     assert(v5[9] == 10);
     v5[9] = 11;
     assert(v5[9] == 11);
-    
     //changing the MyVector back
     v5[9] = 10;
+    //testing operator=
+    MyVector v7;
+    v7 = v5;
+    //testing operator==
+    assert(v5 == v7);
+    //testing operator!=
+    assert(v5 != v6);
+    //testing operator<
+    assert(v6 < v5);
+    //testing operator>
+    assert(v5 > v6);
+    //testing operator<=
+    assert(v6 <= v5 && v5 <= v7);
+    //testing operator>=
+    assert(v5 >= v6 && v5 <= v7);
     
-    MyVector v7 = v5;
+    
+    
+    
     
     
     
