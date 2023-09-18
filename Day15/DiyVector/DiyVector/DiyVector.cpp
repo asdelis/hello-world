@@ -17,6 +17,7 @@ MyVector::MyVector() {
 
 //constructor that takes an array as an argument
 MyVector::MyVector(size_t capacity) {
+    std::cout << "hello from the constructor" << "\n";
     if (capacity > 0) {
         size_ = 0;
         capacity_ = capacity;
@@ -26,6 +27,7 @@ MyVector::MyVector(size_t capacity) {
 
 //constructor that reads in an array
 MyVector::MyVector(int* inputData, size_t size) {
+    std::cout << "hello from the constructor" << "\n";
     size_ = 0;
     capacity_ = 10;
     data = new int[capacity_];
@@ -38,6 +40,7 @@ MyVector::MyVector(int* inputData, size_t size) {
 
 //destructor
 MyVector::~MyVector() {
+    std::cout << "hello from the destructor" << "\n";
     size_ = 0;
     capacity_ = 0;
     delete[] data;
@@ -120,6 +123,7 @@ MyVector& MyVector::operator=(const MyVector& rhs) {
 
 //copy constructor that does a deep copy
 MyVector::MyVector(const MyVector& rhs) {
+    std::cout << "hello from the constructor" << "\n";
     if (this != &rhs) {
         delete[] data;
         size_ = rhs.getSize();
