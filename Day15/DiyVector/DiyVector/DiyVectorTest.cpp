@@ -94,7 +94,7 @@ int main() {
     //changing the MyVector back
     v5[9] = 10;
     
-    
+    MyVector v7 = v5;
     
     
     
