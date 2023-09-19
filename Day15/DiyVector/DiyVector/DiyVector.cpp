@@ -125,7 +125,7 @@ MyVector& MyVector::operator=(const MyVector& rhs) {
 MyVector::MyVector(const MyVector& rhs) {
     std::cout << "hello from the constructor" << "\n";
     if (this != &rhs) {
-        delete[] data;
+        //delete[] data;
         size_ = rhs.getSize();
         capacity_ = 2 * size_;
         if (capacity_ > 0) {

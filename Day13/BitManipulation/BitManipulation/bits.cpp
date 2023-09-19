@@ -42,7 +42,7 @@ bool GetBit( uint32_t input, int b ) {
     input <<= leftShift;
     //shift the bit to the right to return either a 0 or a 1
     input >>= 31;
-    if (input == 0x0000) {
+    if (input == 0) {
         isOne = false;
     }
   return isOne;
