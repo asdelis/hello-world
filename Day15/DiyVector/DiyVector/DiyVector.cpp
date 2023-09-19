@@ -9,7 +9,6 @@
 
 //constructor that takes no argument
 MyVector::MyVector() {
-    std::cout << "hello from the constructor" << "\n";
     size_ = 0;
     capacity_ = 10;
     data = new int[capacity_];
@@ -17,7 +16,6 @@ MyVector::MyVector() {
 
 //constructor that takes an array as an argument
 MyVector::MyVector(size_t capacity) {
-    std::cout << "hello from the constructor" << "\n";
     if (capacity > 0) {
         size_ = 0;
         data = new int[capacity_];
@@ -27,7 +25,6 @@ MyVector::MyVector(size_t capacity) {
 
 //constructor that reads in an array
 MyVector::MyVector(int* inputData, size_t size) {
-    std::cout << "hello from the constructor" << "\n";
     size_ = 0;
     capacity_ = 10;
     data = new int[capacity_];
@@ -38,9 +35,22 @@ MyVector::MyVector(int* inputData, size_t size) {
     }
 }
 
+//copy constructor that does a deep copy
+MyVector::MyVector(const MyVector& rhs) {
+    if (this != &rhs) {
+        size_ = rhs.getSize();
+        capacity_ = 2 * size_;
+        if (capacity_ > 0) {
+            data = new int[capacity_];
+            for (size_t i = 0; i < rhs.getSize(); i++) {
+                data[i] = rhs[i];
+            }
+        }
+    }
+}
+
 //destructor
 MyVector::~MyVector() {
-    std::cout << "hello from the destructor" << "\n";
     size_ = 0;
     capacity_ = 0;
     delete[] data;
@@ -121,23 +131,7 @@ MyVector& MyVector::operator=(const MyVector& rhs) {
     return *this;
 }
 
-//copy constructor that does a deep copy
-MyVector::MyVector(const MyVector& rhs) {
-    std::cout << "hello from the constructor" << "\n";
-    if (this != &rhs) {
-        //delete[] data;
-        size_ = rhs.getSize();
-        capacity_ = 2 * size_;
-        if (capacity_ > 0) {
-            data = new int[capacity_];
-            for (size_t i = 0; i < rhs.getSize(); i++) {
-                data[i] = rhs[i];
-            }
-        }
-    }
-}
-
-//operator== that sees if two vectors are equal
+//operator== that checks if the values of the two MyVectors are equal
 bool MyVector::operator==(const MyVector& rhs) const {
     bool isEqual = true;
     if (size_ != rhs.size_){
@@ -145,9 +139,10 @@ bool MyVector::operator==(const MyVector& rhs) const {
     }
     else {
         for (int i = 0; i < rhs.getSize(); i++) {
-            if (data[i] == rhs[i]) {
-                isEqual = true;
-            }
+            //if (data[i] == rhs[i]) {
+            //    isEqual = true;
+            //}
+            //isEqual = data[i] == rhs[i]
         }
     }
     return isEqual;
