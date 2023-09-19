@@ -11,7 +11,7 @@ int main() {
     
     //PART 1 Tests
     //test constructor that takes no arguments (the long way)
-    MyVector v1;
+    MyVector<int> v1;
     //getSize and getCapacity
     std::cout << "getSize and getCapacity test" << "\n";
     size_t a = v1.getSize();
@@ -44,7 +44,7 @@ int main() {
     std::cout << g << "\n";
     
     //test constructor that takes an array as an argument
-    MyVector v2(30);
+    MyVector<float> v2(30);
     assert(v2.getSize() == 0 && v2.getCapacity() == 30);
     v2.push_back(9);
     v2.push_back(10);
@@ -56,8 +56,8 @@ int main() {
     assert(v2.getSize() == 1);
     
     //test constructor that reads in an array
-    int testArray[] = {1,2,3,4,5};
-    MyVector v3(testArray, 5);
+    double testArray[] = {1,2,3,4,5};
+    MyVector<double> v3(testArray, 5);
     assert(v3.getSize() == 5 && v3.getCapacity() == 10);
     v3.push_back(6);
     v3.push_back(7);
@@ -69,7 +69,7 @@ int main() {
     assert(v3.getSize() == 6);
     
     //test constructor that reads in a MyVector
-    MyVector v4(v3);
+    MyVector<double> v4(v3);
     assert(v4.getSize() == 6 && v4.getCapacity() == 12);
     v4.push_back(7);
     v4.push_back(8);
@@ -82,9 +82,9 @@ int main() {
     
     //PART 2 Tests
     int testArray2[] = {1,2,3,4,5,6,7,8,9,10};
-    MyVector v5(testArray2, 10);
+    MyVector<int> v5(testArray2, 10);
     int testArray3[] = {1,2,3,4,5,5,4,3,2,1};
-    MyVector v6(testArray3, 10);
+    MyVector<int> v6(testArray3, 10);
     //testing operator[]
     assert(v5[9] == 10);
     v5[9] = 11;
@@ -92,7 +92,7 @@ int main() {
     //changing the MyVector back
     v5[9] = 10;
     //testing operator=
-    MyVector v7;
+    MyVector<int> v7;
     v7 = v5;
     //testing operator==
     assert(v5 == v7);
