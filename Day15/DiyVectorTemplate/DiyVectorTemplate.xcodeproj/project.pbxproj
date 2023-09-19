@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		EB5E75852AB92D5600A25AF7 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EB5E75842AB92D5600A25AF7 /* main.cpp */; };
+		EB5E75902AB9344400A25AF7 /* DiyVectorTemplate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EB5E758F2AB9344400A25AF7 /* DiyVectorTemplate.cpp */; };
+		EB5E75922AB9349600A25AF7 /* DiyVectorTemplateTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EB5E75912AB9349600A25AF7 /* DiyVectorTemplateTest.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,7 +25,9 @@
 
 /* Begin PBXFileReference section */
 		EB5E75812AB92D5600A25AF7 /* DiyVectorTemplate */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = DiyVectorTemplate; sourceTree = BUILT_PRODUCTS_DIR; };
-		EB5E75842AB92D5600A25AF7 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		EB5E758E2AB9344400A25AF7 /* DiyVectorTemplate.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = DiyVectorTemplate.hpp; sourceTree = "<group>"; };
+		EB5E758F2AB9344400A25AF7 /* DiyVectorTemplate.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DiyVectorTemplate.cpp; sourceTree = "<group>"; };
+		EB5E75912AB9349600A25AF7 /* DiyVectorTemplateTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DiyVectorTemplateTest.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +60,9 @@
 		EB5E75832AB92D5600A25AF7 /* DiyVectorTemplate */ = {
 			isa = PBXGroup;
 			children = (
-				EB5E75842AB92D5600A25AF7 /* main.cpp */,
+				EB5E75912AB9349600A25AF7 /* DiyVectorTemplateTest.cpp */,
+				EB5E758F2AB9344400A25AF7 /* DiyVectorTemplate.cpp */,
+				EB5E758E2AB9344400A25AF7 /* DiyVectorTemplate.hpp */,
 			);
 			path = DiyVectorTemplate;
 			sourceTree = "<group>";
@@ -119,7 +124,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EB5E75852AB92D5600A25AF7 /* main.cpp in Sources */,
+				EB5E75902AB9344400A25AF7 /* DiyVectorTemplate.cpp in Sources */,
+				EB5E75922AB9349600A25AF7 /* DiyVectorTemplateTest.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
