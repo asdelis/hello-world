@@ -32,7 +32,7 @@ public:
     size_t getCapacity() const;
     void push_back(int val);
     void pop_back();
-    int get(int index);
+    int get(int index) const;
     void set(int index, int newValue);
     
     //PART 2 Operator Overloads

@@ -68,7 +68,7 @@ size_t MyVector::getCapacity() const{
 
 //.push_back method
 void MyVector::push_back(int val) {
-    if (size_ + 1 == capacity_) {
+    if (size_ == capacity_) {
         growVector();
     }
     data[size_] = val;
@@ -90,12 +90,16 @@ void MyVector::growVector() {
 }
 
 //.pop_back method
+//test this make sure that this works with push_back correctly
 void MyVector::pop_back() {
+    data[size_ - 1] = -1;
     size_--;
 }
 
 //returns the value at the indicated index place
-int MyVector::get(int index) {
+//check to see that the size is not equal to zero
+//change to size_t
+int MyVector::get(int index) const {
     return data[index];
 }
 
