@@ -7,40 +7,60 @@
 
 #include "circleTest.hpp"
 
-
-void circle() {
-    // create the window
-    sf::RenderWindow window(sf::VideoMode(800, 600), "My window");
-    window.setFramerateLimit(60);
-
-    //creating a shape
-    sf::CircleShape shape(10.f);
-    shape.setFillColor(sf::Color(100, 250, 50));
-    sf::Vector2f circlePosition (400, 50);
-    shape.setPosition(circlePosition);
-
-    //shape movment variables
-    float xVelocity = 3;
-    float yVelocity = 3;
-
-    // run the program as long as the window is open
-    while (window.isOpen())
-    {
-        // check all the window's events that were triggered since the last iteration of the loop
-        sf::Event event;
-        while (window.pollEvent(event))
-        {
-            // "close requested" event: we close the window
-            if (event.type == sf::Event::Closed)
-                window.close();
-        }
-        //movement
-        circlePosition.y += yVelocity;
-        shape.setPosition(circlePosition);
-
-        // clear the window with black color
-        window.clear(sf::Color::Black);
-        window.draw(shape);
-        window.display();
-    }
+//circle constructor
+circle::circle(){
+    c_.setRadius(15);
+    c_.setFillColor(sf::Color(0, 0, 0));
+    c_.setOutlineThickness(1.f);
+    c_.setOutlineColor(sf::Color(0, 100, 200));
+    x_ = 0;
+    y_ = 0;
 }
+
+void circle::setInitPos(){
+    x_ = rand() % 800;
+    y_ = 50;
+    c_.setPosition(x_, y_);
+}
+
+void circle::moveCircle(){
+    c_.move(0, 0.03);
+}
+
+
+//sf::CircleShape circle::makeCircle(){
+//    //make the shape with the correct size
+//    sf::CircleShape shape(10.f);
+//
+//    //set random position
+//    shape.setPosition(x_, y_);
+//    return shape;
+//
+//    //edit the color and outline
+//    shape.setFillColor(sf::Color(0, 0, 0));
+//    shape.setOutlineThickness(1.f);
+//    shape.setOutlineColor(sf::Color(0, 100, 200));
+//
+//    //random x position
+//    x_ = rand() % 800;
+//    //always want the height to be the same at around 50
+//    y_ = 50;
+//
+//    //set random position
+//    shape.setPosition(x_, y_);
+//    return shape;
+//};
+
+//void setCircle(circle c){
+//    //random x position
+//    x_ = rand() % 800;
+//    //always want the height to be the same at around 50
+//    y_ = 50;
+//
+//    //set random position
+//    shape.setPosition(x_, y_);
+//    return shape;
+//}
+
+
+
