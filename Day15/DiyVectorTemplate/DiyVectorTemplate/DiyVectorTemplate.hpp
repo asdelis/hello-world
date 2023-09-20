@@ -245,7 +245,7 @@ template <typename T>
 bool MyVector<T>::operator<=(const MyVector<T>& rhs) const {
     assert(size_ == rhs.size_ && "The size of the vectors must be the same");
     for (int i = 0; i < rhs.getSize(); i++) {
-        if (data[i] >= rhs[i]) {
+        if ((data[i] > rhs[i]) || (data[i] != rhs[i])) {
             return false;
         }
     }
@@ -269,7 +269,7 @@ template <typename T>
 bool MyVector<T>::operator>=(const MyVector<T>& rhs) const {
     assert(size_ == rhs.size_ && "The size of the vectors must be the same");
     for (int i = 0; i < rhs.getSize(); i++) {
-        if (data[i] <= rhs[i]) {
+        if ((data[i] < rhs[i]) || (data[i] != rhs[i])) {
             return false;
         }
     }
