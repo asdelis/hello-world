@@ -1,0 +1,3 @@
+/Users/andrewdelis/Desktop/CS6010/finalProject/xcode/CMakeFiles/testSFML.dir
+/Users/andrewdelis/Desktop/CS6010/finalProject/xcode/CMakeFiles/ALL_BUILD.dir
+/Users/andrewdelis/Desktop/CS6010/finalProject/xcode/CMakeFiles/ZERO_CHECK.dir
