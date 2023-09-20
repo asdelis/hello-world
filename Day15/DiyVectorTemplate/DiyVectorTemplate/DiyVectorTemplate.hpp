@@ -50,8 +50,8 @@ private:
     void growVector();
 };
 
-template <typename T>
 //constructor that takes no argument
+template <typename T>
 MyVector<T>::MyVector() {
     std::cout << "hello from the constructor" << "\n";
     size_ = 0;
@@ -59,8 +59,8 @@ MyVector<T>::MyVector() {
     data = new T[capacity_];
 }
 
-template <typename T>
 //constructor that takes an array as an argument
+template <typename T>
 MyVector<T>::MyVector(size_t capacity) {
     std::cout << "hello from the constructor" << "\n";
     if (capacity > 0) {
@@ -70,8 +70,8 @@ MyVector<T>::MyVector(size_t capacity) {
     }
 }
 
-template <typename T>
 //constructor that reads in an array
+template <typename T>
 MyVector<T>::MyVector(T* inputData, size_t size) {
     std::cout << "hello from the constructor" << "\n";
     size_ = 0;
@@ -84,8 +84,8 @@ MyVector<T>::MyVector(T* inputData, size_t size) {
     }
 }
 
-template <typename T>
 //destructor
+template <typename T>
 MyVector<T>::~MyVector() {
     std::cout << "hello from the destructor" << "\n";
     size_ = 0;
@@ -93,20 +93,20 @@ MyVector<T>::~MyVector() {
     delete[] data;
 }
 
-template <typename T>
 //.size method
+template <typename T>
 size_t MyVector<T>::getSize() const {
     return size_;
 }
 
-template <typename T>
 //.size method
+template <typename T>
 size_t MyVector<T>::getCapacity() const{
     return capacity_;
 }
 
-template <typename T>
 //.push_back method
+template <typename T>
 void MyVector<T>::push_back(int val) {
     if (size_ + 1 == capacity_) {
         growVector();
@@ -115,8 +115,8 @@ void MyVector<T>::push_back(int val) {
     size_++;
 }
 
-template <typename T>
 //grow vector private function called in the push_back method
+template <typename T>
 void MyVector<T>::growVector() {
     //create a new array
     T* temp = new T[2 * capacity_];
@@ -130,26 +130,26 @@ void MyVector<T>::growVector() {
     capacity_ *= 2;
 }
 
-template <typename T>
 //.pop_back method
+template <typename T>
 void MyVector<T>::pop_back() {
     size_--;
 }
 
-template <typename T>
 //returns the value at the indicated index place
+template <typename T>
 T MyVector<T>::get(size_t index) {
     return data[index];
 }
 
-template <typename T>
 //changes the value of an indicated index place
+template <typename T>
 void MyVector<T>::set(size_t index, T newValue) {
     data[index] = newValue;
 }
 
-template <typename T>
 //overload the [] operator
+template <typename T>
 T& MyVector<T>::operator[](size_t index) {
     assert(index < size_ && "Operator is not in range");
     return data[index];
@@ -161,8 +161,8 @@ const T& MyVector<T>::operator[](size_t index) const {
     return data[index];
 }
 
-template <typename T>
 //operator= that does a deep copy
+template <typename T>
 MyVector<T>& MyVector<T>::operator=(const MyVector<T>& rhs) {
     if (this != &rhs) {
         delete[] data;
@@ -178,8 +178,8 @@ MyVector<T>& MyVector<T>::operator=(const MyVector<T>& rhs) {
     return *this;
 }
 
-template <typename T>
 //copy constructor that does a deep copy
+template <typename T>
 MyVector<T>::MyVector(const MyVector<T>& rhs) {
     std::cout << "hello from the constructor" << "\n";
     if (this != &rhs) {
@@ -195,89 +195,83 @@ MyVector<T>::MyVector(const MyVector<T>& rhs) {
     }
 }
 
-template <typename T>
 //operator== that sees if two vectors are equal
-bool MyVector<T>::operator==(const MyVector<T>& rhs) const {
-    bool isEqual = true;
-    if (size_ != rhs.size_){
-        isEqual = false;
-    }
-    else {
-        for (int i = 0; i < rhs.getSize(); i++) {
-            if (data[i] == rhs[i]) {
-                isEqual = true;
-            }
-        }
-    }
-    return isEqual;
-}
-
 template <typename T>
-//operator!= that sees if two vectors are equal
-bool MyVector<T>::operator!=(const MyVector<T>& rhs) const {
-    bool isNotEqual = false;
+bool MyVector<T>::operator==(const MyVector<T>& rhs) const {
     if (size_ != rhs.size_){
-        isNotEqual = true;
+        return false;
     }
     else {
         for (int i = 0; i < rhs.getSize(); i++) {
             if (data[i] != rhs[i]) {
-                isNotEqual = true;
+                return false;
             }
         }
     }
-    return isNotEqual;
+    return true;
 }
 
+//operator!= that sees if two vectors are equal
 template <typename T>
+bool MyVector<T>::operator!=(const MyVector<T>& rhs) const {
+    if (size_ != rhs.size_){
+        return false;
+    }
+    else {
+        for (int i = 0; i < rhs.getSize(); i++) {
+            if (data[i] == rhs[i]) {
+                return false;
+            }
+        }
+    }
+    return true;
+}
+
 //operator< that loops through and returns whether the left hand side
 //is less than the right hand side lexographically
+template <typename T>
 bool MyVector<T>::operator<(const MyVector<T>& rhs) const {
     assert(size_ == rhs.size_ && "The size of the vectors must be the same");
-    bool isLessThan = false;
-    for (int i = 0; i < rhs.getSize(); i++) {
-        if (data[i] < rhs[i]) {
-            isLessThan = true;
-        }
-    }
-    return isLessThan;
-}
-
-template <typename T>
-//operator<=
-bool MyVector<T>::operator<=(const MyVector<T>& rhs) const {
-    assert(size_ == rhs.size_ && "The size of the vectors must be the same");
-    bool isLessThanOrEqual = false;
-    for (int i = 0; i < rhs.getSize(); i++) {
-        if (data[i] <= rhs[i]) {
-            isLessThanOrEqual = true;
-        }
-    }
-    return isLessThanOrEqual;
-}
-
-template <typename T>
-//operator>
-bool MyVector<T>::operator>(const MyVector<T>& rhs) const {
-    assert(size_ == rhs.size_ && "The size of the vectors must be the same");
-    bool isLessThan = false;
     for (int i = 0; i < rhs.getSize(); i++) {
         if (data[i] > rhs[i]) {
-            isLessThan = true;
+            return false;
         }
     }
-    return isLessThan;
+    return true;
 }
 
+//operator<=
 template <typename T>
-//operator>=
-bool MyVector<T>::operator>=(const MyVector<T>& rhs) const {
+bool MyVector<T>::operator<=(const MyVector<T>& rhs) const {
     assert(size_ == rhs.size_ && "The size of the vectors must be the same");
-    bool isLessThan = false;
     for (int i = 0; i < rhs.getSize(); i++) {
         if (data[i] >= rhs[i]) {
-            isLessThan = true;
+            return false;
         }
     }
-    return isLessThan;
+    return true;
+}
+
+//operator>
+template <typename T>
+bool MyVector<T>::operator>(const MyVector<T>& rhs) const {
+    assert(size_ == rhs.size_ && "The size of the vectors must be the same");
+    for (int i = 0; i < rhs.getSize(); i++) {
+        if (data[i] < rhs[i]) {
+            return false;
+        }
+    }
+    return true;
+}
+
+//operator>=
+template <typename T>
+bool MyVector<T>::operator>=(const MyVector<T>& rhs) const {
+    assert(size_ == rhs.size_ && "The size of the vectors must be the same");
+    for (int i = 0; i < rhs.getSize(); i++) {
+        if (data[i] <= rhs[i]) {
+            return false;
+        }
+    }
+    return true;
 }
