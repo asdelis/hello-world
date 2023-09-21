@@ -26,7 +26,12 @@ void circle::setInitPos(){
 }
 
 void circle::moveCircle(){
-    c_.move(0, 1);
+    c_.move(0, 2);
+    sf::Vector2f c_Pos = c_.getPosition();
+    if (c_Pos.y > 600) {
+        c_.setPosition(c_Pos.x, 0);
+    }
+    c_.move(0, 2);
 }
 
 

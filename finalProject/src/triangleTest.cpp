@@ -25,7 +25,7 @@ void triangle::move(sf::RenderWindow& window){
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left)){
         //stop the triangle from moving more left if it hits x = 0
         if (t_Pos.x > mostLeftPosition.x){
-            t_.move(-2.0f, 0.f);
+            t_.move(-3.0f, 0.f);
         }
     }
 
@@ -34,7 +34,7 @@ void triangle::move(sf::RenderWindow& window){
         //stop the triangle from moving more right if it hits x = 800
         if (t_Pos.x < mostRightPosition.x){
         //right key is pressed: move our character
-        t_.move(2.0f, 0.f);
+        t_.move(3.0f, 0.f);
         }
     }
 }
