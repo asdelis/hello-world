@@ -19,7 +19,7 @@ public:
     sf::RectangleShape r_;
     
     //rectangle constructor that details height/width, color, and outline
-    rectangle(sf::Vector2f pos);
+    rectangle();
     
     //create movement
     void moveRectangle();

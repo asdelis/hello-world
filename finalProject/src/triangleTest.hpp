@@ -13,24 +13,28 @@
 
 #endif /* triangleTest_hpp */
 
-//create class called triangle that will act as our player
+
 class triangle{
 public:
-    //create a triangle shape
+    //this triangle class uses the already existing rectangle class
     sf::CircleShape t_;
 
-    //constructor
+    //triangle constructor that details radius, color, and outline
     triangle();
 
-    //need a move method
+    //create movement
     void move(sf::RenderWindow& window);
+    
+    //get position of the triangle
+    sf::Vector2f getPosition();
+    
 
-    //need a draw method
-    void draw(const sf::RenderWindow& window);
-
-    //reset position if hit
-    void resetPosition(const sf::RenderWindow& window);
-
+//    //need a draw method
+//    void draw(const sf::RenderWindow& window);
+    
+//    //reset position if hit
+//    void resetPosition(const sf::RenderWindow& window);
+    
     //fire a rectangle from the front of the ship
     //Rectangle makeRectangle() const;
     //create a friend variable that will help with collisions
