@@ -36,6 +36,7 @@
 /* Begin PBXBuildFile section */
 		71802144081A47828D2BC340 /* helloSFML.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 215212C39FFB498D8E3BCAE9 /* helloSFML.cpp */; };
 		EB5E75AE2ABB638000A25AF7 /* circleTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EB5E75AC2ABB638000A25AF7 /* circleTest.cpp */; };
+		EB5E75B12ABBAC5B00A25AF7 /* rectangleTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EB5E75AF2ABBAC5B00A25AF7 /* rectangleTest.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,8 @@
 		D199B57AA1C34CC680C7BA4F /* testSFML */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = testSFML; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB5E75AC2ABB638000A25AF7 /* circleTest.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = circleTest.cpp; path = src/circleTest.cpp; sourceTree = "<group>"; };
 		EB5E75AD2ABB638000A25AF7 /* circleTest.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = circleTest.hpp; path = src/circleTest.hpp; sourceTree = "<group>"; };
+		EB5E75AF2ABBAC5B00A25AF7 /* rectangleTest.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = rectangleTest.cpp; path = src/rectangleTest.cpp; sourceTree = "<group>"; };
+		EB5E75B02ABBAC5B00A25AF7 /* rectangleTest.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = rectangleTest.hpp; path = src/rectangleTest.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,7 +90,9 @@
 			children = (
 				215212C39FFB498D8E3BCAE9 /* helloSFML.cpp */,
 				EB5E75AC2ABB638000A25AF7 /* circleTest.cpp */,
+				EB5E75AF2ABBAC5B00A25AF7 /* rectangleTest.cpp */,
 				EB5E75AD2ABB638000A25AF7 /* circleTest.hpp */,
+				EB5E75B02ABBAC5B00A25AF7 /* rectangleTest.hpp */,
 			);
 			name = "Source Files";
 			sourceTree = "<group>";
@@ -231,6 +236,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB5E75B12ABBAC5B00A25AF7 /* rectangleTest.cpp in Sources */,
 				71802144081A47828D2BC340 /* helloSFML.cpp in Sources */,
 				EB5E75AE2ABB638000A25AF7 /* circleTest.cpp in Sources */,
 			);

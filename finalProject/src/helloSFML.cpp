@@ -1,4 +1,5 @@
 #include "circleTest.hpp"
+#include "rectangleTest.hpp"
 
 int main() {
     // create the window
@@ -17,14 +18,9 @@ int main() {
     c3.setInitPos();
     c4.setInitPos();
     c5.setInitPos();
+    //set the initial postion of the test rectangle using Vector2f and getPosition()
+    sf::Vector2f circlePos = c1.c_.getPosition();
     
-//    //creating a shape
-//    sf::CircleShape shape(10.f);
-//    shape.setFillColor(sf::Color(0, 0, 0));
-//    shape.setOutlineThickness(1.f);
-//    shape.setOutlineColor(sf::Color(0, 100, 200));
-//    sf::Vector2f circlePosition (400, 50);
-//    shape.setPosition(circlePosition);
 
     // run the program as long as the window is open
     while (window.isOpen())
@@ -44,6 +40,9 @@ int main() {
         c3.moveCircle();
         c4.moveCircle();
         c5.moveCircle();
+        //create movement for the rectangle
+        rectangle r1(circlePos);
+        r1.moveRectangle();
         
         // clear the window with black color
         window.clear(sf::Color::Black);
@@ -54,6 +53,8 @@ int main() {
         window.draw(c3.c_);
         window.draw(c4.c_);
         window.draw(c5.c_);
+        //draw the circles
+        window.draw(r1.r_);
         
         //display the window
         window.display();

@@ -17,9 +17,6 @@ class circle {
 public:
     //this circle class uses the already existing circle class
     sf::CircleShape c_;
-    //and saves the position
-    float x_;
-    float y_;
     
     //circle constructor that details radius, color, and outline
     circle();
@@ -30,10 +27,13 @@ public:
     //create movement
     void moveCircle();
     
-    //functions for main (makes 5 circles, initializes their position and moves them
-    void spawnCircles();
+    //get the position of the circle so we can use SFML get position
+    
     
 private:
+    //saves the position of the circle
+    float x_;
+    float y_;
     
 };
 
