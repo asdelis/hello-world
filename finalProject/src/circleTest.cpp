@@ -26,7 +26,7 @@ void circle::setInitPos(){
 }
 
 void circle::moveCircle(){
-    c_.move(0, 0.03);
+    c_.move(0, 1);
 }
 
 
