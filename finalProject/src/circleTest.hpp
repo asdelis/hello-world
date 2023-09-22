@@ -21,6 +21,9 @@ public:
     //circle constructor that details radius, color, and outline
     circle();
     
+    //whether this has been hit or not
+    bool shouldRenderCircle;
+    
     //set initial position
     void setInitPos();
     
@@ -29,6 +32,7 @@ public:
     
     //erase circle method using set position
     void eraseCircle();
+    
     
 private:
     //saves the position of the circle

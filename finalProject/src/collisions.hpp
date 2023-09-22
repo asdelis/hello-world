@@ -17,8 +17,9 @@
 
 #endif /* collisions_hpp */
 
+void collisions(circle& c, rectangle& r);
+void triangleCollision(circle& c, std::vector<circle> circles, triangle& t);
 
-bool collisions(circle& c, rectangle& r);
-
-bool collisions(circle& c, triangle& t);
+void resetAllCircles(std::vector<circle> circles);
+void shoot(triangle t, std::vector<rectangle> rectangles, rectangle r);
 

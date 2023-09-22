@@ -25,7 +25,7 @@ cmake_minimum_required(VERSION 3.15)
 project(testSFML)
 
 #the project contains an executable named testSFML that uses the following cpp files
-add_executable(testSFML src/helloSFML.cpp src/circleTest.cpp src/circleTest.hpp src/rectangleTest.cpp src/rectangleTest.hpp src/triangleTest.cpp src/triangleTest.hpp)
+add_executable(testSFML src/helloSFML.cpp src/circleTest.cpp src/circleTest.hpp src/rectangleTest.cpp src/rectangleTest.hpp src/triangleTest.cpp src/triangleTest.hpp src/collisions.cpp src/collisions.hpp)
 
 #create a folder named "cmake" at the top of your project and put the
 #findSFML.cmake file in it.  This line tells Cmake to look there for

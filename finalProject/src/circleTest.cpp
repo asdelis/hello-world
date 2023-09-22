@@ -13,6 +13,7 @@ circle::circle(){
     c_.setFillColor(sf::Color(0, 0, 0));
     c_.setOutlineThickness(1.f);
     c_.setOutlineColor(sf::Color(0, 100, 200));
+    bool shouldRenderCircle = true;
     x_ = 0;
     y_ = 0;
 }
@@ -37,5 +38,4 @@ void circle::moveCircle(){
 void circle::eraseCircle(){
     c_.setPosition(-1000.f, -1000.f);
 }
-
 

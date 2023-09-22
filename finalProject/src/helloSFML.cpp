@@ -17,13 +17,14 @@ int main() {
     std::vector<circle> circles {c1, c2, c3, c4, c5, c7, c8, c9};
     //create a triangle
     triangle t1;
+    triangle& t = t1;
     //create a rectangle and put it in a vector
     rectangle r1;
     std::vector<rectangle> rectangles;
     rectangles.push_back(r1);
 
     //set the initial postion of all 5 circles
-    for (size_t i = 0; i < circles.size(); i++) {
+    for (size_t i = 0; i < circles.size(); i++){
         circles[i].setInitPos();
     }
     
@@ -34,8 +35,7 @@ int main() {
         //check all the window's events that
         //were triggered since the last iteration of the loop
         sf::Event event;
-        while (window.pollEvent(event))
-        {
+        while (window.pollEvent(event)){
             //"close requested" event: we close the window
             if (event.type == sf::Event::Closed)
                 window.close();
@@ -44,28 +44,28 @@ int main() {
         //MOVEMENT
         //create movement for the triangle
         t1.move(window);
-        
         //create movement for the circles
-        for (size_t i = 0; i < circles.size(); i++) {
-            bool isHit;
+        for (size_t i = 0; i < circles.size(); i++){
             circles[i].moveCircle();
-            collisions(circles[i], t1);
         }
+        
+        //SHOOT
         //set the position for the rectangle and update it in the vector
-        if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space))
-        {
+        if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space)){
             //getPosition() for the triangle
             sf::Vector2f t1Pos = t1.t_.getPosition();
+            //get the middle of the triangle
+            size_t middle = t1.t_.getRadius();
+            t1Pos.x += middle;
             //set the rectangle position
             r1.r_.setPosition(t1Pos.x, t1Pos.y);
             //push this back again
             rectangles.push_back(r1);
         }
         //move the rectangles
-        for (size_t i = 0; i < rectangles.size(); i++) {
+        for (size_t i = 0; i < rectangles.size(); i++){
             rectangles[i].moveRectangle();
         }
-        
         
         // clear the window with black color
         window.clear(sf::Color::Black);
@@ -74,16 +74,25 @@ int main() {
         //draw the triangle
         window.draw(t1.t_);
         //draw the circles
-        for (size_t i = 0; i < circles.size(); i++) {
+        for (size_t i = 0; i < circles.size(); i++){
             window.draw(circles[i].c_);
         }
         //draw the rectangles
-        for (int i = 0; i < rectangles.size(); i++){
+        for (size_t i = 0; i < rectangles.size(); i++){
             window.draw(rectangles[i].r_);
         }
         
         //display the window
         window.display();
+        
+        //COLLISIONS
+        //triangle and circle collision
+        for (size_t i = 0; i < circles.size(); i++){
+            collisions(circles[i], r1);
+        }
+        for (size_t i = 0; i < circles.size(); i++){
+            triangleCollision(circles[i], circles, t1);
+        }
     }
     return 0;
 }
