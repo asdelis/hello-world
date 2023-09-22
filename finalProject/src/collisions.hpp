@@ -17,9 +17,17 @@
 
 #endif /* collisions_hpp */
 
-void collisions(circle& c, rectangle& r);
-void triangleCollision(circle& c, std::vector<circle> circles, triangle& t);
+//what happens when a rectangle and a circle collide
+void rectangleCollision(circle& c, rectangle& r);
 
-void resetAllCircles(std::vector<circle> circles);
-void shoot(triangle t, std::vector<rectangle> rectangles, rectangle r);
+//what happens when a triangle and a circle collide
+void triangleCollision(circle& c, std::vector<circle>& circles, triangle& t);
 
+//resets all the circle positions
+void resetAllCircles(std::vector<circle>& circles);
+
+//returns whether a vector is entirely false
+bool vectorRenderStatus(std::vector<circle> circles);
+
+//resets the game
+void resetGame(std::vector<circle>& circles);

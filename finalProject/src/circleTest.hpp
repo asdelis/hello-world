@@ -30,8 +30,6 @@ public:
     //create movement
     void moveCircle();
     
-    //erase circle method using set position
-    void eraseCircle();
     
     
 private:

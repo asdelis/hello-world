@@ -86,13 +86,15 @@ int main() {
         window.display();
         
         //COLLISIONS
-        //triangle and circle collision
+        //rectangle and circle collision
         for (size_t i = 0; i < circles.size(); i++){
-            collisions(circles[i], r1);
+            rectangleCollision(circles[i], r1);
         }
+        //triangle and circle collision
         for (size_t i = 0; i < circles.size(); i++){
             triangleCollision(circles[i], circles, t1);
         }
+        resetGame(circles);
     }
     return 0;
 }
