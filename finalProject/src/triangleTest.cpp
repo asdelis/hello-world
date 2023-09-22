@@ -13,6 +13,7 @@ triangle::triangle(){
     t_.setPointCount(3);
     t_.setPosition(380.f, 550.f);
     t_.setFillColor(sf::Color(100, 100, 100));
+    sf::FloatRect boundingBox = t_.getGlobalBounds();
 }
 
 //move method for triangle class
@@ -38,6 +39,11 @@ void triangle::move(sf::RenderWindow& window){
         }
     }
 }
-        
+
+//reset position method if hit
+  void triangle::resetPosition() {
+    //set the position of the triangle
+    t_.setPosition(380.f, 550.f);
+  }
 
 

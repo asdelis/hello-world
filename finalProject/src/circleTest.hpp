@@ -27,8 +27,8 @@ public:
     //create movement
     void moveCircle();
     
-    //get the position of the circle so we can use SFML get position
-    
+    //erase circle method using set position
+    void eraseCircle();
     
 private:
     //saves the position of the circle

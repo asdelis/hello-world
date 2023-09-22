@@ -34,5 +34,8 @@ void circle::moveCircle(){
     c_.move(0, 2);
 }
 
+void circle::eraseCircle(){
+    c_.setPosition(-1000.f, -1000.f);
+}
 
 

@@ -1,6 +1,7 @@
-#include "circleTest.hpp"
-#include "rectangleTest.hpp"
-#include "triangleTest.hpp"
+//#include "circleTest.hpp"
+//#include "rectangleTest.hpp"
+//#include "triangleTest.hpp"
+#include "collisions.hpp"
 
 int main() {
     // create the window
@@ -26,7 +27,6 @@ int main() {
         circles[i].setInitPos();
     }
     
-    
     //PROGRAM LOOP
     // run the program as long as the window is open
     while (window.isOpen())
@@ -44,9 +44,12 @@ int main() {
         //MOVEMENT
         //create movement for the triangle
         t1.move(window);
+        
         //create movement for the circles
         for (size_t i = 0; i < circles.size(); i++) {
+            bool isHit;
             circles[i].moveCircle();
+            collisions(circles[i], t1);
         }
         //set the position for the rectangle and update it in the vector
         if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space))
@@ -62,6 +65,7 @@ int main() {
         for (size_t i = 0; i < rectangles.size(); i++) {
             rectangles[i].moveRectangle();
         }
+        
         
         // clear the window with black color
         window.clear(sf::Color::Black);

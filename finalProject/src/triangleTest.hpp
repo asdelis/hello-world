@@ -28,17 +28,8 @@ public:
     //get position of the triangle
     sf::Vector2f getPosition();
     
-
-//    //need a draw method
-//    void draw(const sf::RenderWindow& window);
-    
-//    //reset position if hit
-//    void resetPosition(const sf::RenderWindow& window);
-    
-    //fire a rectangle from the front of the ship
-    //Rectangle makeRectangle() const;
-    //create a friend variable that will help with collisions
-    //friend bool collides(const Triangle& triangle, const Circle& circle);
+    //resets the position of the triangle after hit
+    void resetPosition();
     
 private:
 };

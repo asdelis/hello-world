@@ -12,6 +12,7 @@ rectangle::rectangle(){
     r_.setSize(sf::Vector2f(2, 6));
     r_.setOutlineThickness(1);
     r_.setOutlineColor(sf::Color::White);
+    sf::FloatRect boundingBox = r_.getGlobalBounds();
     x_ = 0;
     y_ = 0;
 }
